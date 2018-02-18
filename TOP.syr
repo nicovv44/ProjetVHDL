@@ -119,7 +119,8 @@ Architecture behavioral of Entity clkdiv is up to date.
 Compiling vhdl file "C:/Users/FONTEILLE/Desktop/ISE/Project1.2/rectangle.vhd" in Library work.
 Architecture behavioral of Entity rectangle is up to date.
 Compiling vhdl file "C:/Users/FONTEILLE/Desktop/ISE/Project1.2/grid.vhd" in Library work.
-Architecture behavioral of Entity grid is up to date.
+Entity <grid> compiled.
+Entity <grid> (Architecture <behavioral>) compiled.
 Compiling vhdl file "C:/Users/FONTEILLE/Desktop/ISE/Project1.2/shapes.vhd" in Library work.
 Architecture behavioral of Entity shapes is up to date.
 Compiling vhdl file "C:/Users/FONTEILLE/Desktop/ISE/Project1.2/move.vhd" in Library work.
@@ -219,18 +220,18 @@ Performing bidirectional port resolution...
 
 Synthesizing Unit <grid>.
     Related source file is "C:/Users/FONTEILLE/Desktop/ISE/Project1.2/grid.vhd".
-WARNING:Xst:647 - Input <beamX<4:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <beamX<3:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <beamY<9>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <beamY<3:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <posX<4:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <posX<3:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <posY<9>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <posY<3:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Found 1-bit 32-to-1 multiplexer for signal <$varindex0000> created at line 76.
-    Found 32-bit 32-to-1 multiplexer for signal <sig$varindex0000> created at line 76.
-INFO:Xst:738 - HDL ADVISOR - 1024 flip-flops were inferred for signal <grid1>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+    Found 1-bit 64-to-1 multiplexer for signal <$varindex0000> created at line 76.
+    Found 64-bit 32-to-1 multiplexer for signal <sig$varindex0000> created at line 76.
+INFO:Xst:738 - HDL ADVISOR - 2048 flip-flops were inferred for signal <grid1>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
     Summary:
-	inferred 1024 D-type flip-flop(s).
-	inferred  33 Multiplexer(s).
+	inferred 2048 D-type flip-flop(s).
+	inferred  65 Multiplexer(s).
 Unit <grid> synthesized.
 
 
@@ -421,8 +422,8 @@ Macro Statistics
 # Counters                                             : 2
  10-bit up counter                                     : 1
  32-bit up counter                                     : 1
-# Registers                                            : 1087
- 1-bit register                                        : 1078
+# Registers                                            : 2111
+ 1-bit register                                        : 2102
  10-bit register                                       : 3
  26-bit register                                       : 4
  32-bit register                                       : 2
@@ -437,9 +438,9 @@ Macro Statistics
  32-bit comparator greatequal                          : 1
  32-bit comparator greater                             : 1
 # Multiplexers                                         : 130
- 1-bit 32-to-1 multiplexer                             : 1
+ 1-bit 64-to-1 multiplexer                             : 1
  1-bit 8-to-1 multiplexer                              : 128
- 32-bit 32-to-1 multiplexer                            : 1
+ 64-bit 32-to-1 multiplexer                            : 1
 
 =========================================================================
 
@@ -463,8 +464,8 @@ Macro Statistics
 # Counters                                             : 2
  10-bit up counter                                     : 1
  32-bit up counter                                     : 1
-# Registers                                            : 1276
- Flip-Flops                                            : 1276
+# Registers                                            : 2300
+ Flip-Flops                                            : 2300
 # Comparators                                          : 58
  10-bit comparator equal                               : 8
  10-bit comparator greatequal                          : 8
@@ -476,9 +477,9 @@ Macro Statistics
  32-bit comparator greatequal                          : 1
  32-bit comparator greater                             : 1
 # Multiplexers                                         : 130
- 1-bit 32-to-1 multiplexer                             : 1
+ 1-bit 64-to-1 multiplexer                             : 1
  1-bit 8-to-1 multiplexer                              : 128
- 32-bit 32-to-1 multiplexer                            : 1
+ 64-bit 32-to-1 multiplexer                            : 1
 
 =========================================================================
 
@@ -507,7 +508,7 @@ Optimizing unit <mover> ...
 Mapping all equations...
 Building and optimizing final netlist ...
 INFO:Xst:2261 - The FF/Latch <CONTROLVGA1/rOut> in Unit <TOP> is equivalent to the following FF/Latch, which will be removed : <CONTROLVGA1/bOut> 
-Found area constraint ratio of 100 (+ 5) on block TOP, actual ratio is 41.
+Found area constraint ratio of 100 (+ 5) on block TOP, actual ratio is 60.
 
 Final Macro Processing ...
 
@@ -515,8 +516,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 1317
- Flip-Flops                                            : 1317
+# Registers                                            : 2341
+ Flip-Flops                                            : 2341
 
 =========================================================================
 
@@ -545,34 +546,34 @@ Design Statistics
 # IOs                              : 15
 
 Cell Usage :
-# BELS                             : 5150
+# BELS                             : 7230
 #      GND                         : 1
 #      INV                         : 101
 #      LUT1                        : 312
-#      LUT2                        : 1477
-#      LUT2_D                      : 6
-#      LUT2_L                      : 22
-#      LUT3                        : 710
-#      LUT3_D                      : 1
+#      LUT2                        : 2490
+#      LUT2_D                      : 7
+#      LUT2_L                      : 21
+#      LUT3                        : 1250
+#      LUT3_D                      : 2
 #      LUT3_L                      : 7
-#      LUT4                        : 565
-#      LUT4_D                      : 8
-#      LUT4_L                      : 47
+#      LUT4                        : 603
+#      LUT4_D                      : 6
+#      LUT4_L                      : 51
 #      MUXCY                       : 725
-#      MUXF5                       : 395
-#      MUXF6                       : 132
-#      MUXF7                       : 66
-#      MUXF8                       : 33
+#      MUXF5                       : 650
+#      MUXF6                       : 264
+#      MUXF7                       : 132
+#      MUXF8                       : 66
 #      VCC                         : 1
 #      XORCY                       : 541
-# FlipFlops/Latches                : 1317
+# FlipFlops/Latches                : 2341
 #      FD                          : 19
 #      FDC                         : 183
 #      FDCE                        : 43
 #      FDCP                        : 40
 #      FDP                         : 4
 #      FDR                         : 2
-#      FDRE                        : 1024
+#      FDRE                        : 2048
 #      FDRS                        : 2
 # Clock Buffers                    : 2
 #      BUFG                        : 1
@@ -587,9 +588,9 @@ Device utilization summary:
 
 Selected Device : 3s500efg320-4 
 
- Number of Slices:                     1755  out of   4656    37%  
- Number of Slice Flip Flops:           1317  out of   9312    14%  
- Number of 4 input LUTs:               3256  out of   9312    34%  
+ Number of Slices:                     2628  out of   4656    56%  
+ Number of Slice Flip Flops:           2341  out of   9312    25%  
+ Number of 4 input LUTs:               4850  out of   9312    52%  
  Number of IOs:                          15
  Number of bonded IOBs:                  15  out of    232     6%  
  Number of GCLKs:                         2  out of     24     8%  
@@ -615,7 +616,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk50                              | BUFGP                  | 1297  |
+clk50                              | BUFGP                  | 2321  |
 CONTROLVGA1/ckdiv21                | BUFG                   | 20    |
 -----------------------------------+------------------------+-------+
 
@@ -633,7 +634,7 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 13.795ns (Maximum Frequency: 72.490MHz)
+   Minimum period: 13.706ns (Maximum Frequency: 72.962MHz)
    Minimum input arrival time before clock: 6.525ns
    Maximum output required time after clock: 9.281ns
    Maximum combinational path delay: No path found
@@ -644,36 +645,37 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk50'
-  Clock period: 13.795ns (frequency: 72.490MHz)
-  Total number of paths / destination ports: 45058 / 1311
+  Clock period: 13.706ns (frequency: 72.962MHz)
+  Total number of paths / destination ports: 58988 / 2335
 -------------------------------------------------------------------------
-Delay:               13.795ns (Levels of Logic = 12)
-  Source:            MOVE1/MOVX/pos_1 (FF)
+Delay:               13.706ns (Levels of Logic = 13)
+  Source:            MOVE1/MOVY/pos_0 (FF)
   Destination:       CONTROLVGA1/rOut (FF)
   Source Clock:      clk50 rising
   Destination Clock: clk50 rising
 
-  Data Path: MOVE1/MOVX/pos_1 to CONTROLVGA1/rOut
+  Data Path: MOVE1/MOVY/pos_0 to CONTROLVGA1/rOut
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCP:C->Q            13   0.591   0.983  MOVE1/MOVX/pos_1 (MOVE1/MOVX/pos_1)
-     INV:I->O              1   0.704   0.000  HEX321/PXA1/Madd_posX6_lut<1>_INV_0 (HEX321/PXA1/Madd_posX6_lut<1>)
-     XORCY:LI->O           1   0.527   0.499  HEX321/PXA1/Madd_posX6_xor<1> (HEX321/posX6Wire<1>)
-     LUT2:I1->O            1   0.704   0.000  HEX321/D6/Msub_newPosX_lut<1> (HEX321/D6/Msub_newPosX_lut<1>)
-     XORCY:LI->O          17   0.527   1.051  HEX321/D6/Msub_newPosX_xor<1> (HEX321/D6/newPosX<1>)
-     MUXF5:S->O            1   0.739   0.499  HEX321/D6/Mmux_romSig_mux0000_5_f5 (HEX321/D6/Mmux_romSig_mux0000_5_f5)
-     LUT3:I1->O            1   0.704   0.000  HEX321/D6/romSig_or0000666_F (N338)
-     MUXF5:I0->O           1   0.321   0.424  HEX321/D6/romSig_or0000666 (HEX321/D6/romSig_or0000666)
-     LUT4:I3->O            1   0.704   0.499  HEX321/D6/romSig_or0000699 (HEX321/D6/romSig_or0000699)
-     LUT4:I1->O            1   0.704   0.000  HEX321/D6/romSig_or0000786_SW0_F (N408)
-     MUXF5:I0->O           1   0.321   0.424  HEX321/D6/romSig_or0000786_SW0 (N218)
-     LUT4_L:I3->LO         1   0.704   0.104  HEX321/D6/romSig_or0000790 (HEX321/D6/romSig)
-     LUT4:I3->O            2   0.704   0.447  redWire0 (blueWire0)
-     FDRS:S                    0.911          CONTROLVGA1/rOut
+     FDCP:C->Q            13   0.591   1.062  MOVE1/MOVY/pos_0 (MOVE1/MOVY/pos_0)
+     LUT2:I1->O            1   0.704   0.000  HEX321/D8/Msub_newPosY_lut<0> (HEX321/D8/Msub_newPosY_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  HEX321/D8/Msub_newPosY_cy<0> (HEX321/D8/Msub_newPosY_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  HEX321/D8/Msub_newPosY_cy<1> (HEX321/D8/Msub_newPosY_cy<1>)
+     XORCY:CI->O          40   0.804   1.300  HEX321/D8/Msub_newPosY_xor<2> (HEX321/D8/newPosY<2>)
+     LUT3:I2->O            1   0.704   0.424  HEX321/D8/Mmux_romSig_mux0005_61 (HEX321/D8/Mmux_romSig_mux0005_6)
+     LUT4:I3->O            1   0.704   0.000  HEX321/D8/romSig_or0000479_G (N357)
+     MUXF5:I1->O           1   0.321   0.499  HEX321/D8/romSig_or0000479 (HEX321/D8/romSig_or0000479)
+     LUT3_L:I1->LO         1   0.704   0.104  HEX321/D8/romSig_or0000502 (HEX321/D8/romSig_or0000502)
+     LUT4:I3->O            1   0.704   0.424  HEX321/D8/romSig_or0000535 (HEX321/D8/romSig_or0000535)
+     LUT4:I3->O            1   0.704   0.424  HEX321/D8/romSig_or0000745 (HEX321/D8/romSig_or0000745)
+     LUT4_L:I3->LO         1   0.704   0.104  HEX321/D8/romSig_or0000790 (HEX321/D8/romSig)
+     LUT4:I3->O            2   0.704   0.482  redWire1 (blueWire1)
+     LUT4:I2->O            1   0.704   0.000  redWire151 (blueWire15)
+     FDRS:D                    0.308          CONTROLVGA1/rOut
     ----------------------------------------
-    Total                     13.795ns (8.865ns logic, 4.930ns route)
-                                       (64.3% logic, 35.7% route)
+    Total                     13.706ns (8.883ns logic, 4.823ns route)
+                                       (64.8% logic, 35.2% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CONTROLVGA1/ckdiv21'
@@ -711,7 +713,7 @@ Delay:               7.413ns (Levels of Logic = 13)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk50'
-  Total number of paths / destination ports: 2226 / 2090
+  Total number of paths / destination ports: 4274 / 4138
 -------------------------------------------------------------------------
 Offset:              6.525ns (Levels of Logic = 4)
   Source:            freeMove (PAD)
@@ -745,7 +747,7 @@ Offset:              9.281ns (Levels of Logic = 5)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDC:C->Q              5   0.591   0.808  CONTROLVGA1/cpth_3 (CONTROLVGA1/cpth_3)
-     LUT3:I0->O            1   0.704   0.424  CONTROLVGA1/cpthsup13811_SW0 (N4)
+     LUT3:I0->O            1   0.704   0.424  CONTROLVGA1/cpthsup13811_SW0 (N20)
      LUT4:I3->O            1   0.704   0.424  CONTROLVGA1/cpthsup13811 (CONTROLVGA1/N6)
      LUT4:I3->O            2   0.704   0.526  CONTROLVGA1/blank_or0000101 (CONTROLVGA1/blank_or0000101)
      LUT2:I1->O            1   0.704   0.420  CONTROLVGA1/blank1 (blank_OBUF)
@@ -776,12 +778,12 @@ Offset:              4.310ns (Levels of Logic = 1)
 =========================================================================
 
 
-Total REAL time to Xst completion: 87.00 secs
-Total CPU time to Xst completion: 87.78 secs
+Total REAL time to Xst completion: 351.00 secs
+Total CPU time to Xst completion: 350.88 secs
  
 --> 
 
-Total memory usage is 352236 kilobytes
+Total memory usage is 350252 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    6 (   0 filtered)

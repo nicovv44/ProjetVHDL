@@ -49,7 +49,7 @@ end grid;
 architecture Behavioral of grid is
 
 --types
-Type gridArray is array (0 to 31) of std_logic_vector (0 to 31);--(about Y) then (about X)
+Type gridArray is array (0 to 31) of std_logic_vector (0 to 63);--(about Y) then (about X)
 
 --signals
 signal grid1 : gridArray := (others => (others => '0'));
@@ -59,11 +59,11 @@ begin
 	process (clk, posX, posY)
 	begin
 		IF (clk='1') AND (clk'EVENT) THEN -- TRUE sur un front montant de clk
-			for X in 0 to 31 loop
+			for X in 0 to 63 loop
 				for Y in 0 to 31 loop
 					if (reset='1') then
 						grid1(Y)(X) <= '0';
-					elsif (drawEnable='1' and X = to_integer(unsigned(posX(9 downto 5))) and Y = to_integer(unsigned(posY(8 downto 4)))) then
+					elsif (drawEnable='1' and X = to_integer(unsigned(posX(9 downto 4))) and Y = to_integer(unsigned(posY(8 downto 4)))) then
 						grid1(Y)(X) <= '1';
 					else
 						grid1(Y)(X) <= grid1(Y)(X);
@@ -73,7 +73,7 @@ begin
 		END IF;
 	end process;
 	
-	sig <= '1' when (grid1(to_integer(unsigned(beamY(8 downto 4))))(to_integer(unsigned(beamX(9 downto 5))))='1' and beamValid='1')
+	sig <= '1' when (grid1(to_integer(unsigned(beamY(8 downto 4))))(to_integer(unsigned(beamX(9 downto 4))))='1' and beamValid='1')
 				else '0';
 
 
