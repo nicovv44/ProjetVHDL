@@ -1,0 +1,761 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Reading design: TOP.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "TOP.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "TOP"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : TOP
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/FONTEILLE/Desktop/ISE/Project1.2/clkSub.vhd" in Library work.
+Architecture behavioral of Entity clksub is up to date.
+Compiling vhdl file "C:/Users/FONTEILLE/Desktop/ISE/Project1.2/valsplit.vhd" in Library work.
+Architecture behavioral of Entity valsplit is up to date.
+Compiling vhdl file "C:/Users/FONTEILLE/Desktop/ISE/Project1.2/posXadd.vhd" in Library work.
+Architecture behavioral of Entity posxadd is up to date.
+Compiling vhdl file "C:/Users/FONTEILLE/Desktop/ISE/Project1.2/digit.vhd" in Library work.
+Architecture behavioral of Entity digit is up to date.
+Compiling vhdl file "C:/Users/FONTEILLE/Desktop/ISE/Project1.2/mover.vhd" in Library work.
+Architecture behavioral of Entity mover is up to date.
+Compiling vhdl file "C:/Users/FONTEILLE/Desktop/ISE/Project1.2/clkDiv.vhd" in Library work.
+Architecture behavioral of Entity clkdiv is up to date.
+Compiling vhdl file "C:/Users/FONTEILLE/Desktop/ISE/Project1.2/rectangle.vhd" in Library work.
+Architecture behavioral of Entity rectangle is up to date.
+Compiling vhdl file "C:/Users/FONTEILLE/Desktop/ISE/Project1.2/shapes.vhd" in Library work.
+Entity <shapes> compiled.
+Entity <shapes> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Users/FONTEILLE/Desktop/ISE/Project1.2/move.vhd" in Library work.
+Architecture behavioral of Entity move is up to date.
+Compiling vhdl file "C:/Users/FONTEILLE/Desktop/ISE/Project1.2/valInc.vhd" in Library work.
+Architecture behavioral of Entity valinc is up to date.
+Compiling vhdl file "C:/Users/FONTEILLE/Desktop/ISE/Project1.2/Hex32.vhd" in Library work.
+Architecture behavioral of Entity hex32 is up to date.
+Compiling vhdl file "C:/Users/FONTEILLE/Desktop/ISE/Project1.2/controlVGA.vhd" in Library work.
+Architecture rtl of Entity controlvga is up to date.
+Compiling vhdl file "C:/Users/FONTEILLE/Desktop/ISE/Project1.2/TOP.vhd" in Library work.
+Architecture behavioral of Entity top is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <TOP> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <shapes> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <move> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <valInc> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Hex32> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <controlVGA> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <clkDiv> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <rectangle> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <mover> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <valsplit> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <posXadd> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <digit> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <clkSub> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <TOP> in library <work> (Architecture <behavioral>).
+Entity <TOP> analyzed. Unit <TOP> generated.
+
+Analyzing Entity <shapes> in library <work> (Architecture <behavioral>).
+Entity <shapes> analyzed. Unit <shapes> generated.
+
+Analyzing Entity <clkDiv> in library <work> (Architecture <behavioral>).
+Entity <clkDiv> analyzed. Unit <clkDiv> generated.
+
+Analyzing Entity <rectangle> in library <work> (Architecture <behavioral>).
+Entity <rectangle> analyzed. Unit <rectangle> generated.
+
+Analyzing Entity <move> in library <work> (Architecture <behavioral>).
+Entity <move> analyzed. Unit <move> generated.
+
+Analyzing Entity <mover> in library <work> (Architecture <behavioral>).
+Entity <mover> analyzed. Unit <mover> generated.
+
+Analyzing Entity <clkSub> in library <work> (Architecture <behavioral>).
+Entity <clkSub> analyzed. Unit <clkSub> generated.
+
+Analyzing Entity <valInc> in library <work> (Architecture <behavioral>).
+Entity <valInc> analyzed. Unit <valInc> generated.
+
+Analyzing Entity <Hex32> in library <work> (Architecture <behavioral>).
+Entity <Hex32> analyzed. Unit <Hex32> generated.
+
+Analyzing Entity <valsplit> in library <work> (Architecture <behavioral>).
+Entity <valsplit> analyzed. Unit <valsplit> generated.
+
+Analyzing Entity <posXadd> in library <work> (Architecture <behavioral>).
+Entity <posXadd> analyzed. Unit <posXadd> generated.
+
+Analyzing Entity <digit> in library <work> (Architecture <behavioral>).
+Entity <digit> analyzed. Unit <digit> generated.
+
+Analyzing Entity <controlVGA> in library <work> (Architecture <rtl>).
+Entity <controlVGA> analyzed. Unit <controlVGA> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <valInc>.
+    Related source file is "C:/Users/FONTEILLE/Desktop/ISE/Project1.2/valInc.vhd".
+    Found 32-bit up counter for signal <val>.
+    Found 32-bit comparator greatequal for signal <cpthsup50M$cmp_ge0000> created at line 48.
+    Found 32-bit register for signal <valNext>.
+    Found 32-bit adder for signal <valNextNext$addsub0000> created at line 50.
+    Summary:
+	inferred   1 Counter(s).
+	inferred  32 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+Unit <valInc> synthesized.
+
+
+Synthesizing Unit <controlVGA>.
+    Related source file is "C:/Users/FONTEILLE/Desktop/ISE/Project1.2/controlVGA.vhd".
+    Found 1-bit register for signal <beamValid>.
+    Found 10-bit register for signal <beamX>.
+    Found 10-bit register for signal <beamY>.
+    Found 1-bit register for signal <bOut>.
+    Found 1-bit register for signal <gOut>.
+    Found 1-bit register for signal <rOut>.
+    Found 10-bit subtractor for signal <beamX$sub0000> created at line 126.
+    Found 10-bit subtractor for signal <beamY$sub0000> created at line 127.
+    Found 1-bit register for signal <ckdiv2>.
+    Found 10-bit register for signal <cpth>.
+    Found 10-bit adder for signal <cpthmux$addsub0000> created at line 92.
+    Found 10-bit comparator greatequal for signal <cpthsup138$cmp_ge0000> created at line 99.
+    Found 10-bit comparator greatequal for signal <cpthsup778$cmp_ge0000> created at line 100.
+    Found 10-bit comparator greatequal for signal <cpthsup794$cmp_ge0000> created at line 101.
+    Found 10-bit comparator greatequal for signal <cpthsup95$cmp_ge0000> created at line 98.
+    Found 10-bit up counter for signal <cptv>.
+    Found 10-bit comparator greatequal for signal <cptvsup2$cmp_ge0000> created at line 113.
+    Found 10-bit comparator greatequal for signal <cptvsup36$cmp_ge0000> created at line 114.
+    Found 10-bit comparator greatequal for signal <cptvsup516$cmp_ge0000> created at line 115.
+    Found 10-bit comparator greatequal for signal <cptvsup525$cmp_ge0000> created at line 116.
+    Summary:
+	inferred   1 Counter(s).
+	inferred  35 D-type flip-flop(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred   8 Comparator(s).
+Unit <controlVGA> synthesized.
+
+
+Synthesizing Unit <clkDiv>.
+    Related source file is "C:/Users/FONTEILLE/Desktop/ISE/Project1.2/clkDiv.vhd".
+    Found 1-bit register for signal <clkd>.
+    Found 32-bit comparator greater for signal <overflow$cmp_gt0000> created at line 54.
+    Found 32-bit register for signal <val>.
+    Found 32-bit adder for signal <valMux$addsub0000> created at line 51.
+    Summary:
+	inferred  33 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+Unit <clkDiv> synthesized.
+
+
+Synthesizing Unit <rectangle>.
+    Related source file is "C:/Users/FONTEILLE/Desktop/ISE/Project1.2/rectangle.vhd".
+    Found 10-bit comparator greater for signal <sig$cmp_gt0000> created at line 55.
+    Found 10-bit comparator greater for signal <sig$cmp_gt0001> created at line 55.
+    Found 10-bit comparator less for signal <sig$cmp_lt0000> created at line 55.
+    Found 10-bit comparator less for signal <sig$cmp_lt0001> created at line 55.
+    Summary:
+	inferred   4 Comparator(s).
+Unit <rectangle> synthesized.
+
+
+Synthesizing Unit <clkSub>.
+    Related source file is "C:/Users/FONTEILLE/Desktop/ISE/Project1.2/clkSub.vhd".
+    Found 1-bit register for signal <clks>.
+    Found 26-bit comparator equal for signal <flag$cmp_eq0000> created at line 51.
+    Found 26-bit register for signal <val>.
+    Found 26-bit adder for signal <valMux$addsub0000> created at line 53.
+    Summary:
+	inferred  27 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+Unit <clkSub> synthesized.
+
+
+Synthesizing Unit <valsplit>.
+    Related source file is "C:/Users/FONTEILLE/Desktop/ISE/Project1.2/valsplit.vhd".
+Unit <valsplit> synthesized.
+
+
+Synthesizing Unit <posXadd>.
+    Related source file is "C:/Users/FONTEILLE/Desktop/ISE/Project1.2/posXadd.vhd".
+    Found 10-bit adder for signal <posX2>.
+    Found 10-bit adder for signal <posX3>.
+    Found 10-bit adder for signal <posX4>.
+    Found 10-bit adder for signal <posX5>.
+    Found 10-bit adder for signal <posX6>.
+    Found 10-bit adder for signal <posX7>.
+    Found 10-bit adder for signal <posX8>.
+    Summary:
+	inferred   7 Adder/Subtractor(s).
+Unit <posXadd> synthesized.
+
+
+Synthesizing Unit <digit>.
+    Related source file is "C:/Users/FONTEILLE/Desktop/ISE/Project1.2/digit.vhd".
+    Found 8x128-bit ROM for signal <romSig$rom0000>.
+    Found 11-bit subtractor for signal <newPosX>.
+    Found 11-bit subtractor for signal <newPosY>.
+    Found 1-bit 8-to-1 multiplexer for signal <romSig$mux0000> created at line 221.
+    Found 1-bit 8-to-1 multiplexer for signal <romSig$mux0001> created at line 221.
+    Found 1-bit 8-to-1 multiplexer for signal <romSig$mux0002> created at line 221.
+    Found 1-bit 8-to-1 multiplexer for signal <romSig$mux0003> created at line 221.
+    Found 1-bit 8-to-1 multiplexer for signal <romSig$mux0004> created at line 221.
+    Found 1-bit 8-to-1 multiplexer for signal <romSig$mux0005> created at line 221.
+    Found 1-bit 8-to-1 multiplexer for signal <romSig$mux0006> created at line 221.
+    Found 1-bit 8-to-1 multiplexer for signal <romSig$mux0007> created at line 221.
+    Found 1-bit 8-to-1 multiplexer for signal <romSig$mux0008> created at line 221.
+    Found 1-bit 8-to-1 multiplexer for signal <romSig$mux0009> created at line 221.
+    Found 1-bit 8-to-1 multiplexer for signal <romSig$mux0010> created at line 221.
+    Found 1-bit 8-to-1 multiplexer for signal <romSig$mux0011> created at line 221.
+    Found 1-bit 8-to-1 multiplexer for signal <romSig$mux0012> created at line 221.
+    Found 1-bit 8-to-1 multiplexer for signal <romSig$mux0013> created at line 221.
+    Found 1-bit 8-to-1 multiplexer for signal <romSig$mux0014> created at line 221.
+    Found 1-bit 8-to-1 multiplexer for signal <romSig$mux0015> created at line 221.
+    Found 11-bit comparator greatequal for signal <sigValid$cmp_ge0000> created at line 220.
+    Found 11-bit comparator greatequal for signal <sigValid$cmp_ge0001> created at line 220.
+    Found 11-bit comparator less for signal <sigValid$cmp_lt0000> created at line 220.
+    Found 11-bit comparator less for signal <sigValid$cmp_lt0001> created at line 220.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred   4 Comparator(s).
+	inferred  16 Multiplexer(s).
+Unit <digit> synthesized.
+
+
+Synthesizing Unit <shapes>.
+    Related source file is "C:/Users/FONTEILLE/Desktop/ISE/Project1.2/shapes.vhd".
+    Found 10-bit adder for signal <maxX1>.
+    Found 10-bit adder for signal <maxY1>.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+Unit <shapes> synthesized.
+
+
+Synthesizing Unit <Hex32>.
+    Related source file is "C:/Users/FONTEILLE/Desktop/ISE/Project1.2/Hex32.vhd".
+Unit <Hex32> synthesized.
+
+
+Synthesizing Unit <mover>.
+    Related source file is "C:/Users/FONTEILLE/Desktop/ISE/Project1.2/mover.vhd".
+    Found 10-bit register for signal <pos>.
+    Found 10-bit adder for signal <$add0000> created at line 73.
+    Found 10-bit subtractor for signal <$sub0000> created at line 73.
+    Found 10-bit comparator equal for signal <max$cmp_eq0000> created at line 83.
+    Found 10-bit comparator equal for signal <min$cmp_eq0000> created at line 84.
+    Found 1-bit register for signal <sens>.
+    Summary:
+	inferred  11 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred   2 Comparator(s).
+Unit <mover> synthesized.
+
+
+Synthesizing Unit <move>.
+    Related source file is "C:/Users/FONTEILLE/Desktop/ISE/Project1.2/move.vhd".
+Unit <move> synthesized.
+
+
+Synthesizing Unit <TOP>.
+    Related source file is "C:/Users/FONTEILLE/Desktop/ISE/Project1.2/TOP.vhd".
+Unit <TOP> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 8
+ 8x128-bit ROM                                         : 8
+# Adders/Subtractors                                   : 42
+ 10-bit adder                                          : 14
+ 10-bit subtractor                                     : 6
+ 11-bit subtractor                                     : 16
+ 26-bit adder                                          : 4
+ 32-bit adder                                          : 2
+# Counters                                             : 2
+ 10-bit up counter                                     : 1
+ 32-bit up counter                                     : 1
+# Registers                                            : 63
+ 1-bit register                                        : 54
+ 10-bit register                                       : 3
+ 26-bit register                                       : 4
+ 32-bit register                                       : 2
+# Comparators                                          : 58
+ 10-bit comparator equal                               : 8
+ 10-bit comparator greatequal                          : 8
+ 10-bit comparator greater                             : 2
+ 10-bit comparator less                                : 2
+ 11-bit comparator greatequal                          : 16
+ 11-bit comparator less                                : 16
+ 26-bit comparator equal                               : 4
+ 32-bit comparator greatequal                          : 1
+ 32-bit comparator greater                             : 1
+# Multiplexers                                         : 128
+ 1-bit 8-to-1 multiplexer                              : 128
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 8
+ 8x128-bit ROM                                         : 8
+# Adders/Subtractors                                   : 42
+ 10-bit adder                                          : 14
+ 10-bit subtractor                                     : 6
+ 11-bit subtractor                                     : 16
+ 26-bit adder                                          : 4
+ 32-bit adder                                          : 2
+# Counters                                             : 2
+ 10-bit up counter                                     : 1
+ 32-bit up counter                                     : 1
+# Registers                                            : 252
+ Flip-Flops                                            : 252
+# Comparators                                          : 58
+ 10-bit comparator equal                               : 8
+ 10-bit comparator greatequal                          : 8
+ 10-bit comparator greater                             : 2
+ 10-bit comparator less                                : 2
+ 11-bit comparator greatequal                          : 16
+ 11-bit comparator less                                : 16
+ 26-bit comparator equal                               : 4
+ 32-bit comparator greatequal                          : 1
+ 32-bit comparator greater                             : 1
+# Multiplexers                                         : 128
+ 1-bit 8-to-1 multiplexer                              : 128
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <TOP> ...
+
+Optimizing unit <valInc> ...
+
+Optimizing unit <controlVGA> ...
+
+Optimizing unit <clkDiv> ...
+
+Optimizing unit <clkSub> ...
+
+Optimizing unit <digit> ...
+
+Optimizing unit <Hex32> ...
+
+Optimizing unit <mover> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+INFO:Xst:2261 - The FF/Latch <CONTROLVGA1/rOut> in Unit <TOP> is equivalent to the following 2 FFs/Latches, which will be removed : <CONTROLVGA1/bOut> <CONTROLVGA1/gOut> 
+Found area constraint ratio of 100 (+ 5) on block TOP, actual ratio is 23.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 292
+ Flip-Flops                                            : 292
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : TOP.ngr
+Top Level Output File Name         : TOP
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 15
+
+Cell Usage :
+# BELS                             : 3020
+#      GND                         : 1
+#      INV                         : 101
+#      LUT1                        : 308
+#      LUT2                        : 445
+#      LUT2_D                      : 7
+#      LUT2_L                      : 20
+#      LUT3                        : 180
+#      LUT3_D                      : 2
+#      LUT3_L                      : 4
+#      LUT4                        : 502
+#      LUT4_D                      : 6
+#      LUT4_L                      : 53
+#      MUXCY                       : 725
+#      MUXF5                       : 124
+#      VCC                         : 1
+#      XORCY                       : 541
+# FlipFlops/Latches                : 292
+#      FD                          : 19
+#      FDC                         : 183
+#      FDCE                        : 43
+#      FDCP                        : 40
+#      FDP                         : 4
+#      FDR                         : 2
+#      FDRS                        : 1
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 14
+#      IBUF                        : 8
+#      OBUF                        : 6
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                      869  out of   4656    18%  
+ Number of Slice Flip Flops:            292  out of   9312     3%  
+ Number of 4 input LUTs:               1628  out of   9312    17%  
+ Number of IOs:                          15
+ Number of bonded IOBs:                  15  out of    232     6%  
+ Number of GCLKs:                         2  out of     24     8%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk50                              | BUFGP                  | 272   |
+CONTROLVGA1/ckdiv21                | BUFG                   | 20    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------------+------------------------+-------+
+Control Signal                           | Buffer(FF name)        | Load  |
+-----------------------------------------+------------------------+-------+
+reset                                    | IBUF                   | 238   |
+MOVE1/MOVX/pos_0_and0001(XST_GND:G)      | NONE(MOVE1/MOVX/pos_0) | 40    |
+VALINC1/val_or0000(VALINC1/val_or00001:O)| NONE(VALINC1/val_0)    | 32    |
+-----------------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 13.722ns (Maximum Frequency: 72.876MHz)
+   Minimum input arrival time before clock: 6.619ns
+   Maximum output required time after clock: 9.281ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk50'
+  Clock period: 13.722ns (frequency: 72.876MHz)
+  Total number of paths / destination ports: 20789 / 285
+-------------------------------------------------------------------------
+Delay:               13.722ns (Levels of Logic = 12)
+  Source:            MOVE1/MOVX/pos_0 (FF)
+  Destination:       CONTROLVGA1/rOut (FF)
+  Source Clock:      clk50 rising
+  Destination Clock: clk50 rising
+
+  Data Path: MOVE1/MOVX/pos_0 to CONTROLVGA1/rOut
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCP:C->Q            13   0.591   1.062  MOVE1/MOVX/pos_0 (MOVE1/MOVX/pos_0)
+     LUT2:I1->O            1   0.704   0.000  HEX321/D7/Msub_newPosX_lut<0> (HEX321/D7/Msub_newPosX_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  HEX321/D7/Msub_newPosX_cy<0> (HEX321/D7/Msub_newPosX_cy<0>)
+     XORCY:CI->O          17   0.804   1.130  HEX321/D7/Msub_newPosX_xor<1> (HEX321/D7/newPosX<1>)
+     LUT2_D:I1->O          2   0.704   0.451  HEX321/D7/Mmux_romSig_mux0008_5_f51_SW0 (N209)
+     LUT4:I3->O            1   0.704   0.455  HEX321/D7/Mmux_romSig_mux0012_5_f5 (HEX321/D7/Mmux_romSig_mux0012_5_f5)
+     LUT3:I2->O            1   0.704   0.000  HEX321/D7/romSig_or0000666_G (N343)
+     MUXF5:I1->O           1   0.321   0.424  HEX321/D7/romSig_or0000666 (HEX321/D7/romSig_or0000666)
+     LUT4_L:I3->LO         1   0.704   0.104  HEX321/D7/romSig_or0000699 (HEX321/D7/romSig_or0000699)
+     LUT4:I3->O            1   0.704   0.424  HEX321/D7/romSig_or0000790_SW0 (N166)
+     LUT4:I3->O            1   0.704   0.424  HEX321/D7/romSig_or0000790 (HEX321/D7/romSig)
+     LUT4:I3->O            1   0.704   0.424  redWire151_SW0_SW0 (N233)
+     LUT4:I3->O            1   0.704   0.000  redWire151 (blueWire15)
+     FDRS:D                    0.308          CONTROLVGA1/rOut
+    ----------------------------------------
+    Total                     13.722ns (8.824ns logic, 4.898ns route)
+                                       (64.3% logic, 35.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CONTROLVGA1/ckdiv21'
+  Clock period: 8.263ns (frequency: 121.021MHz)
+  Total number of paths / destination ports: 940 / 30
+-------------------------------------------------------------------------
+Delay:               8.263ns (Levels of Logic = 14)
+  Source:            CONTROLVGA1/cptv_2 (FF)
+  Destination:       CONTROLVGA1/cptv_9 (FF)
+  Source Clock:      CONTROLVGA1/ckdiv21 rising
+  Destination Clock: CONTROLVGA1/ckdiv21 rising
+
+  Data Path: CONTROLVGA1/cptv_2 to CONTROLVGA1/cptv_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            10   0.591   0.917  CONTROLVGA1/cptv_2 (CONTROLVGA1/cptv_2)
+     LUT4:I2->O            1   0.704   0.424  CONTROLVGA1/cptvsup52528 (CONTROLVGA1/cptvsup52528)
+     LUT4:I3->O            3   0.704   0.535  CONTROLVGA1/cptvsup525224_SW0 (N384)
+     LUT4:I3->O            8   0.704   0.932  CONTROLVGA1/cptvsup525224 (CONTROLVGA1/cptvsup525)
+     LUT3:I0->O            1   0.704   0.000  CONTROLVGA1/Mcount_cptv_lut<0> (CONTROLVGA1/Mcount_cptv_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  CONTROLVGA1/Mcount_cptv_cy<0> (CONTROLVGA1/Mcount_cptv_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  CONTROLVGA1/Mcount_cptv_cy<1> (CONTROLVGA1/Mcount_cptv_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  CONTROLVGA1/Mcount_cptv_cy<2> (CONTROLVGA1/Mcount_cptv_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  CONTROLVGA1/Mcount_cptv_cy<3> (CONTROLVGA1/Mcount_cptv_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  CONTROLVGA1/Mcount_cptv_cy<4> (CONTROLVGA1/Mcount_cptv_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  CONTROLVGA1/Mcount_cptv_cy<5> (CONTROLVGA1/Mcount_cptv_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  CONTROLVGA1/Mcount_cptv_cy<6> (CONTROLVGA1/Mcount_cptv_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  CONTROLVGA1/Mcount_cptv_cy<7> (CONTROLVGA1/Mcount_cptv_cy<7>)
+     MUXCY:CI->O           0   0.059   0.000  CONTROLVGA1/Mcount_cptv_cy<8> (CONTROLVGA1/Mcount_cptv_cy<8>)
+     XORCY:CI->O           1   0.804   0.000  CONTROLVGA1/Mcount_cptv_xor<9> (CONTROLVGA1/Mcount_cptv9)
+     FDCE:D                    0.308          CONTROLVGA1/cptv_9
+    ----------------------------------------
+    Total                      8.263ns (5.455ns logic, 2.808ns route)
+                                       (66.0% logic, 34.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk50'
+  Total number of paths / destination ports: 718 / 150
+-------------------------------------------------------------------------
+Offset:              6.619ns (Levels of Logic = 8)
+  Source:            subValSelect (PAD)
+  Destination:       MOVE1/MOVX/CLKS1/val_0 (FF)
+  Destination Clock: clk50 rising
+
+  Data Path: subValSelect to MOVE1/MOVX/CLKS1/val_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            20   1.218   1.277  subValSelect_IBUF (subValSelect_IBUF)
+     LUT3:I0->O            1   0.704   0.000  MOVE1/MOVX/CLKS1/Mcompar_flag_cmp_eq0000_lut<5> (MOVE1/MOVX/CLKS1/Mcompar_flag_cmp_eq0000_lut<5>)
+     MUXCY:S->O            1   0.464   0.000  MOVE1/MOVX/CLKS1/Mcompar_flag_cmp_eq0000_cy<5> (MOVE1/MOVX/CLKS1/Mcompar_flag_cmp_eq0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  MOVE1/MOVX/CLKS1/Mcompar_flag_cmp_eq0000_cy<6> (MOVE1/MOVX/CLKS1/Mcompar_flag_cmp_eq0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  MOVE1/MOVX/CLKS1/Mcompar_flag_cmp_eq0000_cy<7> (MOVE1/MOVX/CLKS1/Mcompar_flag_cmp_eq0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  MOVE1/MOVX/CLKS1/Mcompar_flag_cmp_eq0000_cy<8> (MOVE1/MOVX/CLKS1/Mcompar_flag_cmp_eq0000_cy<8>)
+     MUXCY:CI->O          27   0.331   1.436  MOVE1/MOVX/CLKS1/Mcompar_flag_cmp_eq0000_cy<9> (MOVE1/MOVX/CLKS1/Mcompar_flag_cmp_eq0000_cy<9>)
+     LUT2:I0->O            1   0.704   0.000  MOVE1/MOVX/CLKS1/valMux<0>1 (MOVE1/MOVX/CLKS1/valMux<0>)
+     FDC:D                     0.308          MOVE1/MOVX/CLKS1/val_0
+    ----------------------------------------
+    Total                      6.619ns (3.906ns logic, 2.713ns route)
+                                       (59.0% logic, 41.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CONTROLVGA1/ckdiv21'
+  Total number of paths / destination ports: 43 / 3
+-------------------------------------------------------------------------
+Offset:              9.281ns (Levels of Logic = 5)
+  Source:            CONTROLVGA1/cpth_3 (FF)
+  Destination:       blank (PAD)
+  Source Clock:      CONTROLVGA1/ckdiv21 rising
+
+  Data Path: CONTROLVGA1/cpth_3 to blank
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              5   0.591   0.808  CONTROLVGA1/cpth_3 (CONTROLVGA1/cpth_3)
+     LUT3:I0->O            1   0.704   0.424  CONTROLVGA1/cpthsup13811_SW0 (N4)
+     LUT4:I3->O            1   0.704   0.424  CONTROLVGA1/cpthsup13811 (CONTROLVGA1/N6)
+     LUT4:I3->O            2   0.704   0.526  CONTROLVGA1/blank_or0000101 (CONTROLVGA1/blank_or0000101)
+     LUT2:I1->O            1   0.704   0.420  CONTROLVGA1/blank1 (blank_OBUF)
+     OBUF:I->O                 3.272          blank_OBUF (blank)
+    ----------------------------------------
+    Total                      9.281ns (6.679ns logic, 2.602ns route)
+                                       (72.0% logic, 28.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk50'
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Offset:              4.394ns (Levels of Logic = 1)
+  Source:            CONTROLVGA1/rOut (FF)
+  Destination:       blue (PAD)
+  Source Clock:      clk50 rising
+
+  Data Path: CONTROLVGA1/rOut to blue
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRS:C->Q             3   0.591   0.531  CONTROLVGA1/rOut (CONTROLVGA1/rOut)
+     OBUF:I->O                 3.272          blue_OBUF (blue)
+    ----------------------------------------
+    Total                      4.394ns (3.863ns logic, 0.531ns route)
+                                       (87.9% logic, 12.1% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 18.00 secs
+Total CPU time to Xst completion: 17.33 secs
+ 
+--> 
+
+Total memory usage is 286700 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

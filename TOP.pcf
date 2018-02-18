@@ -1,0 +1,22 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Sun Feb 18 03:03:20 2018
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "red" LOCATE = SITE "H14" LEVEL 1;
+COMP "blue" LOCATE = SITE "G15" LEVEL 1;
+COMP "zero" LOCATE = SITE "H18" LEVEL 1;
+COMP "subValSelect" LOCATE = SITE "N17" LEVEL 1;
+COMP "clk50" LOCATE = SITE "C9" LEVEL 1;
+COMP "green" LOCATE = SITE "H15" LEVEL 1;
+COMP "hsync" LOCATE = SITE "F15" LEVEL 1;
+COMP "posXM" LOCATE = SITE "D18" LEVEL 1;
+COMP "posYM" LOCATE = SITE "V4" LEVEL 1;
+COMP "posXP" LOCATE = SITE "H13" LEVEL 1;
+COMP "posYP" LOCATE = SITE "K17" LEVEL 1;
+COMP "reset" LOCATE = SITE "L13" LEVEL 1;
+COMP "vsync" LOCATE = SITE "F14" LEVEL 1;
+COMP "freeMove" LOCATE = SITE "L14" LEVEL 1;
+NET "clk50_BUFGP/IBUFG" BEL "clk50_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+SCHEMATIC END;
+
