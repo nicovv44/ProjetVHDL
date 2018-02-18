@@ -9,35 +9,37 @@ Target Device  : xc3s500e
 Target Package : fg320
 Target Speed   : -4
 Mapper Version : spartan3e -- $Revision: 1.55 $
-Mapped Date    : Sun Feb 18 03:03:17 2018
+Mapped Date    : Sun Feb 18 17:12:32 2018
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:    0
+Number of warnings:    9
 Logic Utilization:
-  Number of Slice Flip Flops:           292 out of   9,312    3%
-  Number of 4 input LUTs:             1,336 out of   9,312   14%
+  Total Number Slice Registers:       1,317 out of   9,312   14%
+    Number used as Flip Flops:          293
+    Number used as Latches:           1,024
+  Number of 4 input LUTs:             1,939 out of   9,312   20%
 Logic Distribution:
-  Number of occupied Slices:            856 out of   4,656   18%
-    Number of Slices containing only related logic:     856 out of     856 100%
-    Number of Slices containing unrelated logic:          0 out of     856   0%
+  Number of occupied Slices:          2,184 out of   4,656   46%
+    Number of Slices containing only related logic:   2,184 out of   2,184 100%
+    Number of Slices containing unrelated logic:          0 out of   2,184   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:       1,645 out of   9,312   17%
-    Number used as logic:             1,336
+  Total Number of 4 input LUTs:       2,248 out of   9,312   24%
+    Number used as logic:             1,939
     Number used as a route-thru:        309
 
   The Slice Logic Distribution report is not meaningful if the design is
   over-mapped for a non-slice resource or if Placement fails.
 
   Number of bonded IOBs:                 15 out of     232    6%
-  Number of BUFGMUXs:                     2 out of      24    8%
+  Number of BUFGMUXs:                    24 out of      24  100%
 
-Average Fanout of Non-Clock Nets:                2.93
+Average Fanout of Non-Clock Nets:                3.02
 
-Peak Memory Usage:  285 MB
-Total REAL time to MAP completion:  4 secs 
-Total CPU time to MAP completion:   4 secs 
+Peak Memory Usage:  295 MB
+Total REAL time to MAP completion:  5 secs 
+Total CPU time to MAP completion:   5 secs 
 
 NOTES:
 
@@ -78,6 +80,33 @@ Section 1 - Errors
 
 Section 2 - Warnings
 --------------------
+WARNING:PhysDesignRules:372 - Gated clock. Clock net GRID1/_cmp_eq0054 is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net GRID1/_cmp_eq0058 is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net GRID1/_cmp_eq0055 is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net GRID1/_cmp_eq0056 is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net GRID1/_cmp_eq0057 is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net GRID1/_cmp_eq0059 is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net GRID1/_cmp_eq0060 is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net GRID1/_cmp_eq0061 is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net GRID1/grid1<0>_10_not0000
+   is sourced by a combinatorial pin. This is not good design practice. Use the
+   CE pin to control the loading of data into the flip-flop.
 
 Section 3 - Informational
 -------------------------

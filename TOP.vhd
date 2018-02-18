@@ -105,20 +105,44 @@ component shapes is
 				beamValid : in  STD_LOGIC;
 				posX : in  STD_LOGIC_VECTOR (9 downto 0);
 				posY : in  STD_LOGIC_VECTOR (9 downto 0);
-				red : out  STD_LOGIC;
-				green : out  STD_LOGIC;
-				blue : out  STD_LOGIC);
+				redOut : out  STD_LOGIC;
+				greenOut : out  STD_LOGIC;
+				blueOut : out  STD_LOGIC);
 end component;
+component grid is
+	Port ( clk : in  STD_LOGIC;
+			  reset : in  STD_LOGIC;
+			  beamX : in  STD_LOGIC_VECTOR (9 downto 0);
+           beamY : in  STD_LOGIC_VECTOR (9 downto 0);
+           beamValid : in  STD_LOGIC;
+			  red : in  STD_LOGIC;
+           green : in  STD_LOGIC;
+           blue : in  STD_LOGIC;
+           posX : in  STD_LOGIC_VECTOR (9 downto 0);
+           posY : in  STD_LOGIC_VECTOR (9 downto 0);
+           redOut : out  STD_LOGIC;
+           greenOut : out  STD_LOGIC;
+           blueOut : out  STD_LOGIC);
+end component;
+
+--signals
 signal beamXBus : std_logic_VECTOR (9 downto 0);
 signal beamYBus : std_logic_VECTOR (9 downto 0);
 signal beamValidWire : std_logic;
-signal redWire : std_logic;--going to ControlVGA
+--going to ControlVGA
+signal redWire : std_logic;
 signal greenWire : std_logic;
 signal blueWire : std_logic;
-signal redShapes : std_logic;--outing from Shapes
+--outing from GRID1
+signal redGrid : std_logic;
+signal greenGrid : std_logic;
+signal blueGrid : std_logic;
+--outing from SHAPES1
+signal redShapes : std_logic;
 signal greenShapes : std_logic;
 signal blueShapes : std_logic;
-signal redHex32 : std_logic;--outing from Hex32
+--outing from Hex32
+signal redHex32 : std_logic;
 signal greenHex32 : std_logic;
 signal blueHex32 : std_logic;
 --constants
@@ -137,10 +161,27 @@ begin
 		constGreen1 <= '1';
 		constBlue1 <= '1';
 		--gathering colors to send to ControlVGA
-		redWire <= redHex32 or redShapes;
-		greenWire <= greenHex32 or greenShapes;
-		blueWire <= blueHex32 or blueShapes;
+		redWire <=     redHex32 or   redShapes or   redGrid;
+		greenWire <= greenHex32 or greenShapes or greenGrid;
+		blueWire <=   blueHex32 or  blueShapes or  blueGrid;
 		--instances
+		GRID1 : grid port map(
+									--in
+									clk => clk50,
+									reset => reset,
+									beamX => beamXBus,
+									beamY => beamYBus,
+									beamValid => beamValidWire,
+									posX => posXWire2,
+									posY => posYWire2,
+									red => '0',--colors displayed by the grid
+									green => '1',
+									blue => '0',
+									--out
+									redOut => redGrid,
+									greenOut => greenGrid,
+									blueOut => blueGrid
+									);
 		SHAPES1 : shapes port map(
 									--in
 									clk => clk50,
@@ -151,9 +192,9 @@ begin
 									posX => posXWire2,
 									posY => posYWire2,
 									--out
-									red => redShapes,
-									green => greenShapes,
-									blue => blueShapes
+									redOut => redShapes,
+									greenOut => greenShapes,
+									blueOut => blueShapes
 									);
 		MOVE1 : move port map(--to move the chrono
 									--in

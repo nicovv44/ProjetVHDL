@@ -37,9 +37,9 @@ entity shapes is
 				beamValid : in  STD_LOGIC;
 				posX : in  STD_LOGIC_VECTOR (9 downto 0);
 				posY : in  STD_LOGIC_VECTOR (9 downto 0);
-				red : out  STD_LOGIC;
-				green : out  STD_LOGIC;
-				blue : out  STD_LOGIC);
+				redOut : out  STD_LOGIC;
+				greenOut : out  STD_LOGIC;
+				blueOut : out  STD_LOGIC);
 end shapes;
 
 architecture Behavioral of shapes is
@@ -92,13 +92,13 @@ signal  blueOut1 : STD_LOGIC;
 
 begin
 	--gathering colors to send out of shapes
-	red <=     redOut1;
-	green <= greenOut1;
-	blue <=   blueOut1;
+	redOut <=     redOut1;
+	greenOut <= greenOut1;
+	blueOut <=   blueOut1;
 	
 	--instances
-	--to make Rectangles blink
-	CLKDIV3 : clkDiv port map(
+	--to make CURSOR blink
+	CLKDIV1 : clkDiv port map(
 							--in
 							clk => clk,
 							reset => reset,
@@ -107,14 +107,14 @@ begin
 							clkd => enable
 							);
 	--RECTANGLE1
-	maxX1 <= std_logic_vector(unsigned(posX)+5);--horizontal size of the rectangle if after +
-	maxY1 <= std_logic_vector(unsigned(posY)+5);--vertical size of the rectangle if after +
-	RECTANGLE1 : rectangle port map(
+	maxX1 <= std_logic_vector(unsigned(posX)+5);--horizontal size of the CURSOR is after +
+	maxY1 <= std_logic_vector(unsigned(posY)+5);--vertical size of the CURSOR is after +
+	CURSOR : rectangle port map(
 								--in
 								beamX => beamX,
 								beamY => beamY,
 								beamValid => beamValid,
-								enable => enable,--on 1bit, displayed or not
+								enable => enable,--on 1bit, displayed or not for blinking
 								red => '1',--colors of she shape
 								green => '1',
 								blue => '1',

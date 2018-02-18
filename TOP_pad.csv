@@ -1,7 +1,7 @@
 #Release 14.7 - par P.20131013 (nt64)
 #Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-#Sun Feb 18 03:06:04 2018
+#Sun Feb 18 17:14:07 2018
 
 #
 ## NOTE: This file is designed to be imported into a spreadsheet program
@@ -49,7 +49,7 @@ B9,,DIFFSI,IP_L13N_0/GCLK9,UNUSED,,0,,,,,,,,,
 B10,,DIFFM,IO_L12P_0/GCLK6,UNUSED,,0,,,,,,,,,
 B11,,IOB,IO/VREF_0,UNUSED,,0,,,,,,,,,
 B12,,,VCCAUX,,,,,,,,2.5,,,,
-B13,blank,IOB,IO_L05N_0/VREF_0,OUTPUT,LVCMOS25*,0,12,SLOW,NONE**,,,UNLOCATED,NO,NONE,
+B13,,DIFFS,IO_L05N_0/VREF_0,UNUSED,,0,,,,,,,,,
 B14,,DIFFM,IO_L04P_0,UNUSED,,0,,,,,,,,,
 B15,,DIFFMI,IP_L02P_0,UNUSED,,0,,,,,,,,,
 B16,,DIFFM,IO_L01P_0,UNUSED,,0,,,,,,,,,
@@ -140,7 +140,7 @@ G10,,DIFFSI,IP_L10N_0,UNUSED,,0,,,,,,,,,
 G11,,,VCCO_0,,,0,,,,,2.50,,,,
 G12,,,GND,,,,,,,,,,,,
 G13,,DIFFS,IO_L20N_1,UNUSED,,1,,,,,,,,,
-G14,,DIFFM,IO_L20P_1,UNUSED,,1,,,,,,,,,
+G14,blank,IOB,IO_L20P_1,OUTPUT,LVCMOS25*,1,12,SLOW,NONE**,,,UNLOCATED,NO,NONE,
 G15,blue,IOB,IO_L18P_1,OUTPUT,LVCMOS25*,1,12,SLOW,NONE**,,,LOCATED,NO,NONE,
 G16,,DIFFS,IO_L18N_1,UNUSED,,1,,,,,,,,,
 G17,,,VCCAUX,,,,,,,,2.5,,,,

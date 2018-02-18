@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-VERHELST-PC::  Sun Feb 18 03:03:24 2018
+VERHELST-PC::  Sun Feb 18 17:12:41 2018
 
 par -w -intstyle ise -ol high -t 1 TOP_map.ncd TOP.ncd TOP.pcf 
 
@@ -41,9 +41,9 @@ Design Summary Report:
    Number of External Bidir IOBs                  0
 
 
-   Number of BUFGMUXs                        2 out of 24      8%
-   Number of Slices                        856 out of 4656   18%
-      Number of SLICEMs                      0 out of 2328    0%
+   Number of BUFGMUXs                       24 out of 24    100%
+   Number of Slices                       2184 out of 4656   46%
+      Number of SLICEMs                    132 out of 2328    5%
 
 
 
@@ -52,61 +52,65 @@ Placer effort level (-pl):    High
 Placer cost table entry (-t): 1
 Router effort level (-rl):    High 
 
-Starting initial Timing Analysis.  REAL time: 2 secs 
-Finished initial Timing Analysis.  REAL time: 2 secs 
+Starting initial Timing Analysis.  REAL time: 3 secs 
+Finished initial Timing Analysis.  REAL time: 3 secs 
 
 
 Starting Placer
-Total REAL time at the beginning of Placer: 2 secs 
-Total CPU  time at the beginning of Placer: 2 secs 
+Total REAL time at the beginning of Placer: 3 secs 
+Total CPU  time at the beginning of Placer: 3 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:16d2aea4) REAL time: 3 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:d1e4e37a) REAL time: 3 secs 
 
 Phase 2.7  Design Feasibility Check
 INFO:Place:834 - Only a subset of IOs are locked. Out of 6 IOs, 5 are locked and 1 are not locked. If you would like to
    print the names of these IOs, please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1. 
-Phase 2.7  Design Feasibility Check (Checksum:16d2aea4) REAL time: 3 secs 
+Phase 2.7  Design Feasibility Check (Checksum:d1e4e37a) REAL time: 3 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:16d2aea4) REAL time: 3 secs 
+Phase 3.31  Local Placement Optimization (Checksum:d1e4e37a) REAL time: 3 secs 
 
 Phase 4.2  Initial Clock and IO Placement
 ..........
-Phase 4.2  Initial Clock and IO Placement (Checksum:5b242d6c) REAL time: 5 secs 
+Phase 4.2  Initial Clock and IO Placement (Checksum:c0e96cf8) REAL time: 6 secs 
 
+.........
+........................................
 Phase 5.30  Global Clock Region Assignment
-Phase 5.30  Global Clock Region Assignment (Checksum:5b242d6c) REAL time: 5 secs 
+WARNING:Place:1263 - Initial clock placement failed. Clock placer will be attempted again with the local clock templates
+   disabled. Please check the clock skew numbers of the local clocks in your design to ensure they are acceptable.
+Phase 5.30  Global Clock Region Assignment (Checksum:c0e96cf8) REAL time: 9 secs 
 
 Phase 6.36  Local Placement Optimization
-Phase 6.36  Local Placement Optimization (Checksum:5b242d6c) REAL time: 5 secs 
+Phase 6.36  Local Placement Optimization (Checksum:c0e96cf8) REAL time: 9 secs 
 
 Phase 7.3  Local Placement Optimization
 .........
-Phase 7.3  Local Placement Optimization (Checksum:a68276ec) REAL time: 5 secs 
+Phase 7.3  Local Placement Optimization (Checksum:28e542b8) REAL time: 9 secs 
 
 Phase 8.5  Local Placement Optimization
-Phase 8.5  Local Placement Optimization (Checksum:a68276ec) REAL time: 5 secs 
+Phase 8.5  Local Placement Optimization (Checksum:28e542b8) REAL time: 9 secs 
 
 Phase 9.8  Global Placement
-................................
-....
-............................................................................
-.......
-.......
-Phase 9.8  Global Placement (Checksum:35f2992f) REAL time: 7 secs 
+..............................................................
+...........
+........................................................................................
+.............................................
+....................................................................
+Phase 9.8  Global Placement (Checksum:df29addb) REAL time: 13 secs 
 
 Phase 10.5  Local Placement Optimization
-Phase 10.5  Local Placement Optimization (Checksum:35f2992f) REAL time: 7 secs 
+Phase 10.5  Local Placement Optimization (Checksum:df29addb) REAL time: 13 secs 
 
 Phase 11.18  Placement Optimization
-Phase 11.18  Placement Optimization (Checksum:5bee8bde) REAL time: 9 secs 
+Phase 11.18  Placement Optimization (Checksum:75be0b13) REAL time: 16 secs 
 
 Phase 12.5  Local Placement Optimization
-Phase 12.5  Local Placement Optimization (Checksum:5bee8bde) REAL time: 9 secs 
+Phase 12.5  Local Placement Optimization (Checksum:75be0b13) REAL time: 16 secs 
 
-Total REAL time to Placer completion: 9 secs 
-Total CPU  time to Placer completion: 9 secs 
+Total REAL time to Placer completion: 16 secs 
+Total CPU  time to Placer completion: 16 secs 
 Writing design to file TOP.ncd
 
 
@@ -114,34 +118,46 @@ Writing design to file TOP.ncd
 Starting Router
 
 
-Phase  1  : 5024 unrouted;      REAL time: 15 secs 
+Phase  1  : 11509 unrouted;      REAL time: 22 secs 
 
-Phase  2  : 4770 unrouted;      REAL time: 15 secs 
+Phase  2  : 9275 unrouted;      REAL time: 24 secs 
 
-Phase  3  : 900 unrouted;      REAL time: 15 secs 
+Phase  3  : 2181 unrouted;      REAL time: 25 secs 
 
-Phase  4  : 978 unrouted; (Par is working to improve performance)     REAL time: 16 secs 
+Phase  4  : 2380 unrouted; (Par is working to improve performance)     REAL time: 27 secs 
 
-Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 17 secs 
+Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 31 secs 
 
 Updating file: TOP.ncd with current fully routed design.
 
-Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 18 secs 
+Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 32 secs 
 
-Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 2 mins 33 secs 
+Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 1 mins 15 secs 
 
-Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 2 mins 37 secs 
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 1 mins 23 secs 
 
-Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 2 mins 37 secs 
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 1 mins 23 secs 
 
-Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 2 mins 39 secs 
+Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 1 mins 24 secs 
 
-Phase 11  : 0 unrouted; (Par is working to improve performance)     REAL time: 2 mins 39 secs 
+Phase 11  : 0 unrouted; (Par is working to improve performance)     REAL time: 1 mins 24 secs 
 
-Phase 12  : 0 unrouted; (Par is working to improve performance)     REAL time: 2 mins 39 secs 
+Phase 12  : 0 unrouted; (Par is working to improve performance)     REAL time: 1 mins 25 secs 
+WARNING:Route:455 - CLK Net:GRID1/_cmp_eq0058 may have excessive skew because 
+      3 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:GRID1/_cmp_eq0053 may have excessive skew because 
+      13 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:GRID1/_cmp_eq0039 may have excessive skew because 
+      32 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:GRID1/_cmp_eq0005 may have excessive skew because 
+      11 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:GRID1/_cmp_eq0048 may have excessive skew because 
+      32 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:CONTROLVGA1/ckdiv2 may have excessive skew because 
+      0 CLK pins and 1 NON_CLK pins failed to route using a CLK template.
 
-Total REAL time to Router completion: 2 mins 39 secs 
-Total CPU time to Router completion: 2 mins 39 secs 
+Total REAL time to Router completion: 1 mins 25 secs 
+Total CPU time to Router completion: 1 mins 24 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -155,13 +171,90 @@ Generating "PAR" statistics.
 **************************
 Generating Clock Report
 **************************
+WARNING:ParHelpers:79 - 
+   The following Clock signals are not routed on the dedicated
+   global clock routing resources. This will usually result in
+   longer delays and higher skew for the clock load pins. This could
+   be the result of incorrect clock placement, more than 8 clocks
+   feeding logic in a single quadrant of the device, or incorrect
+   logic partitioning into the quadrant(s). Check the timing report
+   to verify the delay and skew for this net
+Net Name: GRID1/_cmp_eq0053
+Net Name: GRID1/_cmp_eq0039
+Net Name: GRID1/_cmp_eq0005
+Net Name: GRID1/_cmp_eq0048
 
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|         clk50_BUFGP | BUFGMUX_X1Y11| No   |  165 |  0.085     |  0.203      |
+|         clk50_BUFGP | BUFGMUX_X1Y11| No   |  166 |  0.066     |  0.188      |
 +---------------------+--------------+------+------+------------+-------------+
-|  CONTROLVGA1/ckdiv2 | BUFGMUX_X1Y10| No   |   11 |  0.020     |  0.165      |
+|   GRID1/_cmp_eq0047 |  BUFGMUX_X2Y1| No   |   32 |  0.040     |  0.161      |
++---------------------+--------------+------+------+------------+-------------+
+|   GRID1/_cmp_eq0034 |  BUFGMUX_X0Y8| No   |   32 |  0.056     |  0.124      |
++---------------------+--------------+------+------+------------+-------------+
+|   GRID1/_cmp_eq0003 |  BUFGMUX_X0Y5| No   |   32 |  0.046     |  0.109      |
++---------------------+--------------+------+------+------------+-------------+
+|   GRID1/_cmp_eq0000 |  BUFGMUX_X3Y2| No   |   32 |  0.044     |  0.108      |
++---------------------+--------------+------+------+------------+-------------+
+|   GRID1/_cmp_eq0037 |  BUFGMUX_X2Y0| No   |   32 |  0.041     |  0.165      |
++---------------------+--------------+------+------+------------+-------------+
+|   GRID1/_cmp_eq0040 |  BUFGMUX_X3Y3| No   |   32 |  0.040     |  0.107      |
++---------------------+--------------+------+------+------------+-------------+
+|   GRID1/_cmp_eq0014 |  BUFGMUX_X0Y9| No   |   32 |  0.050     |  0.118      |
++---------------------+--------------+------+------+------------+-------------+
+|   GRID1/_cmp_eq0045 |  BUFGMUX_X0Y6| No   |   32 |  0.052     |  0.118      |
++---------------------+--------------+------+------+------------+-------------+
+|   GRID1/_cmp_eq0033 |  BUFGMUX_X0Y4| No   |   32 |  0.052     |  0.118      |
++---------------------+--------------+------+------+------------+-------------+
+|   GRID1/_cmp_eq0049 | BUFGMUX_X1Y10| No   |   32 |  0.037     |  0.167      |
++---------------------+--------------+------+------+------------+-------------+
+|   GRID1/_cmp_eq0036 |  BUFGMUX_X0Y2| No   |   32 |  0.043     |  0.114      |
++---------------------+--------------+------+------+------------+-------------+
+|   GRID1/_cmp_eq0052 |  BUFGMUX_X0Y7| No   |   32 |  0.037     |  0.111      |
++---------------------+--------------+------+------+------------+-------------+
+|   GRID1/_cmp_eq0046 | BUFGMUX_X2Y10| No   |   32 |  0.039     |  0.165      |
++---------------------+--------------+------+------+------------+-------------+
+|   GRID1/_cmp_eq0050 |  BUFGMUX_X3Y7| No   |   32 |  0.057     |  0.120      |
++---------------------+--------------+------+------+------------+-------------+
+|   GRID1/_cmp_eq0035 |  BUFGMUX_X3Y8| No   |   32 |  0.043     |  0.107      |
++---------------------+--------------+------+------+------------+-------------+
+|   GRID1/_cmp_eq0038 |  BUFGMUX_X1Y1| No   |   32 |  0.037     |  0.167      |
++---------------------+--------------+------+------+------------+-------------+
+|   GRID1/_cmp_eq0043 |  BUFGMUX_X0Y3| No   |   32 |  0.039     |  0.108      |
++---------------------+--------------+------+------+------------+-------------+
+|   GRID1/_cmp_eq0051 |  BUFGMUX_X3Y4| No   |   32 |  0.045     |  0.109      |
++---------------------+--------------+------+------+------------+-------------+
+|   GRID1/_cmp_eq0044 |  BUFGMUX_X3Y5| No   |   32 |  0.046     |  0.115      |
++---------------------+--------------+------+------+------------+-------------+
+|  CONTROLVGA1/ckdiv2 |         Local|      |   12 |  0.037     |  1.600      |
++---------------------+--------------+------+------+------------+-------------+
+|   GRID1/_cmp_eq0054 |         Local|      |   32 |  0.360     |  2.271      |
++---------------------+--------------+------+------+------------+-------------+
+|   GRID1/_cmp_eq0058 |         Local|      |   32 |  1.463     |  2.391      |
++---------------------+--------------+------+------+------------+-------------+
+|   GRID1/_cmp_eq0055 |         Local|      |   32 |  0.418     |  2.162      |
++---------------------+--------------+------+------+------------+-------------+
+|   GRID1/_cmp_eq0056 |         Local|      |   32 |  0.722     |  2.469      |
++---------------------+--------------+------+------+------------+-------------+
+|   GRID1/_cmp_eq0057 |         Local|      |   32 |  0.585     |  2.326      |
++---------------------+--------------+------+------+------------+-------------+
+|   GRID1/_cmp_eq0059 |         Local|      |   32 |  0.479     |  2.223      |
++---------------------+--------------+------+------+------------+-------------+
+|   GRID1/_cmp_eq0060 |         Local|      |   32 |  0.392     |  2.166      |
++---------------------+--------------+------+------+------------+-------------+
+|   GRID1/_cmp_eq0061 |         Local|      |   32 |  0.393     |  2.281      |
++---------------------+--------------+------+------+------------+-------------+
+|   GRID1/_cmp_eq0053 |         Local|      |   32 |  7.282     |  7.345      |
++---------------------+--------------+------+------+------------+-------------+
+|   GRID1/_cmp_eq0039 |         Local|      |   32 |  1.830     |  3.443      |
++---------------------+--------------+------+------+------------+-------------+
+|   GRID1/_cmp_eq0005 |         Local|      |   32 |  5.278     |  5.344      |
++---------------------+--------------+------+------+------------+-------------+
+|GRID1/grid1<0>_10_no |              |      |      |            |             |
+|               t0000 |         Local|      |   32 |  0.506     |  2.265      |
++---------------------+--------------+------+------+------------+-------------+
+|   GRID1/_cmp_eq0048 |         Local|      |   32 |  2.442     |  3.449      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -181,11 +274,11 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net clk | SETUP       |         N/A|    12.919ns|     N/A|           0
-  50_BUFGP                                  | HOLD        |     1.104ns|            |       0|           0
+  Autotimespec constraint for clock net clk | SETUP       |         N/A|    13.869ns|     N/A|           0
+  50_BUFGP                                  | HOLD        |     1.026ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net CON | SETUP       |         N/A|     6.593ns|     N/A|           0
-  TROLVGA1/ckdiv2                           | HOLD        |     1.674ns|            |       0|           0
+  Autotimespec constraint for clock net CON | SETUP       |         N/A|     6.335ns|     N/A|           0
+  TROLVGA1/ckdiv2                           | HOLD        |     1.658ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -201,16 +294,16 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 2 mins 40 secs 
-Total CPU time to PAR completion: 2 mins 39 secs 
+Total REAL time to PAR completion: 1 mins 26 secs 
+Total CPU time to PAR completion: 1 mins 25 secs 
 
-Peak Memory Usage:  339 MB
+Peak Memory Usage:  385 MB
 
 Placement: Completed - No errors found.
 Routing: Completed - No errors found.
 
 Number of error messages: 0
-Number of warning messages: 0
+Number of warning messages: 8
 Number of info messages: 2
 
 Writing design to file TOP.ncd
