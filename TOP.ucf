@@ -2,27 +2,27 @@
 # PlanAhead Generated physical constraints 
 
 NET "clk50" LOC = C9;
-NET "freeMove" LOC = L14;
+NET "blue" LOC = G15;
 NET "green" LOC = H15;
 NET "hsync" LOC = F15;
 NET "posXM" LOC = D18;
 NET "posXP" LOC = H13;
 NET "posYM" LOC = V4;
 NET "posYP" LOC = K17;
-NET "blue" LOC = G15;
 NET "red" LOC = H14;
 NET "reset" LOC = L13;
-NET "subValSelect" LOC = N17;
-NET "zero" LOC = H18;
 NET "vsync" LOC = F14;
+NET "zero" LOC = H18;
+NET "drawEnable" LOC = N17;
+NET "freeMove" LOC = L14;
 
 # PlanAhead Generated IO constraints 
 
+NET "freeMove" PULLDOWN;
+NET "drawEnable" PULLDOWN;
 NET "posXM" PULLDOWN;
 NET "posXP" PULLDOWN;
 NET "posYM" PULLDOWN;
 NET "posYP" PULLDOWN;
-NET "freeMove" PULLDOWN;
 NET "reset" PULLDOWN;
-NET "subValSelect" PULLDOWN;
 NET "zero" PULLDOWN;

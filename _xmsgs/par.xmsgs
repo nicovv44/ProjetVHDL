@@ -8,44 +8,7 @@
 <msg type="info" file="Par" num="282" delta="old" >No user timing constraints were detected or you have set the option to ignore timing constraints (&quot;par -x&quot;). Place and Route will run in &quot;Performance Evaluation Mode&quot; to automatically improve the performance of all internal clocks in this design. Because there are not defined timing requirements, a timing score will not be reported in the PAR report in this mode. The PAR timing summary will list the performance achieved for each clock. Note: For the fastest runtime, set the effort level to &quot;std&quot;.  For best performance, set the effort level to &quot;high&quot;.
 </msg>
 
-<msg type="info" file="Place" num="834" delta="old" >Only a subset of IOs are locked. Out of <arg fmt="%d" index="1">6</arg> IOs, <arg fmt="%d" index="2">5</arg> are locked and <arg fmt="%d" index="3">1</arg> are not locked. <arg fmt="%s" index="4">If you would like to print the names of these IOs, please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1.</arg> 
-</msg>
-
-<msg type="warning" file="Place" num="1263" delta="new" >Initial clock placement failed. Clock placer will be attempted again with the local clock templates disabled. Please check the clock skew numbers of the local clocks in your design to ensure they are acceptable.
-</msg>
-
-<msg type="warning" file="Route" num="455" delta="new" >CLK Net:<arg fmt="%s" index="1">GRID1/_cmp_eq0058</arg> may have excessive skew because 
-   <arg fmt="%d" index="2">3</arg> CLK pins and <arg fmt="%d" index="3">0</arg> NON_CLK pins failed to route using a CLK template.
-</msg>
-
-<msg type="warning" file="Route" num="455" delta="new" >CLK Net:<arg fmt="%s" index="1">GRID1/_cmp_eq0053</arg> may have excessive skew because 
-   <arg fmt="%d" index="2">13</arg> CLK pins and <arg fmt="%d" index="3">0</arg> NON_CLK pins failed to route using a CLK template.
-</msg>
-
-<msg type="warning" file="Route" num="455" delta="new" >CLK Net:<arg fmt="%s" index="1">GRID1/_cmp_eq0039</arg> may have excessive skew because 
-   <arg fmt="%d" index="2">32</arg> CLK pins and <arg fmt="%d" index="3">0</arg> NON_CLK pins failed to route using a CLK template.
-</msg>
-
-<msg type="warning" file="Route" num="455" delta="new" >CLK Net:<arg fmt="%s" index="1">GRID1/_cmp_eq0005</arg> may have excessive skew because 
-   <arg fmt="%d" index="2">11</arg> CLK pins and <arg fmt="%d" index="3">0</arg> NON_CLK pins failed to route using a CLK template.
-</msg>
-
-<msg type="warning" file="Route" num="455" delta="new" >CLK Net:<arg fmt="%s" index="1">GRID1/_cmp_eq0048</arg> may have excessive skew because 
-   <arg fmt="%d" index="2">32</arg> CLK pins and <arg fmt="%d" index="3">0</arg> NON_CLK pins failed to route using a CLK template.
-</msg>
-
-<msg type="warning" file="Route" num="455" delta="old" >CLK Net:<arg fmt="%s" index="1">CONTROLVGA1/ckdiv2</arg> may have excessive skew because 
-   <arg fmt="%d" index="2">0</arg> CLK pins and <arg fmt="%d" index="3">1</arg> NON_CLK pins failed to route using a CLK template.
-</msg>
-
-<msg type="warning" file="ParHelpers" num="79" delta="old" >
-The following Clock signals are not routed on the dedicated
-global clock routing resources. This will usually result in
-longer delays and higher skew for the clock load pins. This could
-be the result of incorrect clock placement, more than 8 clocks
-feeding logic in a single quadrant of the device, or incorrect
-logic partitioning into the quadrant(s). Check the timing report
-to verify the delay and skew for this net
+<msg type="info" file="Place" num="834" delta="new" >Only a subset of IOs are locked. Out of <arg fmt="%d" index="1">6</arg> IOs, <arg fmt="%d" index="2">5</arg> are locked and <arg fmt="%d" index="3">1</arg> are not locked. <arg fmt="%s" index="4">If you would like to print the names of these IOs, please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1.</arg> 
 </msg>
 
 <msg type="info" file="Timing" num="2761" delta="old" >N/A entries in the Constraints List may indicate that the constraint is not analyzed due to the following: No paths covered by this constraint; Other constraints intersect with this constraint; or This constraint was disabled by a Path Tracing Control. Please run the Timespec Interaction Report (TSI) via command line (trce tsi) or Timing Analyzer GUI.</msg>

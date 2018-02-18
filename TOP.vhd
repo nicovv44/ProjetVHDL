@@ -39,7 +39,7 @@ entity TOP is
 			  posYM : in  STD_LOGIC;
 			  freeMove : in STD_LOGIC;
 			  zero : in STD_LOGIC;
-			  subValSelect : in STD_LOGIC;
+			  drawEnable : in STD_LOGIC;
            red : out  STD_LOGIC;
            green : out  STD_LOGIC;
            blue : out  STD_LOGIC;
@@ -90,6 +90,8 @@ component move is
            reset : in  STD_LOGIC;
            posX : inout  STD_LOGIC_VECTOR (9 downto 0);
            posY : inout  STD_LOGIC_VECTOR (9 downto 0);
+			  posXMax : in  STD_LOGIC_VECTOR (9 downto 0);
+			  posYMax : in  STD_LOGIC_VECTOR (9 downto 0);
 			  posXP : in  STD_LOGIC;
 			  posXM : in  STD_LOGIC;
 			  posYP : in  STD_LOGIC;
@@ -120,6 +122,7 @@ component grid is
            blue : in  STD_LOGIC;
            posX : in  STD_LOGIC_VECTOR (9 downto 0);
            posY : in  STD_LOGIC_VECTOR (9 downto 0);
+			  drawEnable : in  STD_LOGIC;
            redOut : out  STD_LOGIC;
            greenOut : out  STD_LOGIC;
            blueOut : out  STD_LOGIC);
@@ -177,6 +180,7 @@ begin
 									red => '0',--colors displayed by the grid
 									green => '1',
 									blue => '0',
+									drawEnable => drawEnable,
 									--out
 									redOut => redGrid,
 									greenOut => greenGrid,
@@ -200,13 +204,15 @@ begin
 									--in
 									clk => clk50,
 									reset => reset,
+									posXMax => std_logic_vector(to_unsigned(569, 10)),--on 10bits
+									posYMax => std_logic_vector(to_unsigned(475, 10)),--on 10bits
 									posXP => '0',
 									posXM => '0',
 									posYP => '0',
 									posYM => '0',
-									subValSelect => subValSelect,
+									subValSelect => '1',--0 is fast, 1 is slow
 									freeMove => freeMove,
-									--out
+									--inout
 									posX => posXWire,
 									posY => posYWire
 									);
@@ -214,13 +220,15 @@ begin
 									--in
 									clk => clk50,
 									reset => reset,
+									posXMax => std_logic_vector(to_unsigned(635, 10)),--on 10bits
+									posYMax => std_logic_vector(to_unsigned(475, 10)),--on 10bits
 									posXP => posXP,
 									posXM => posXM,
 									posYP => posYP,
 									posYM => posYM,
-									subValSelect => subValSelect,
+									subValSelect => '1',--0 is fast, 1 is slow
 									freeMove => freeMove,
-									--out
+									--inout
 									posX => posXWire2,
 									posY => posYWire2
 									);

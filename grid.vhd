@@ -40,6 +40,7 @@ entity grid is
            blue : in  STD_LOGIC;
            posX : in  STD_LOGIC_VECTOR (9 downto 0);
            posY : in  STD_LOGIC_VECTOR (9 downto 0);
+			  drawEnable : in  STD_LOGIC;
            redOut : out  STD_LOGIC;
            greenOut : out  STD_LOGIC;
            blueOut : out  STD_LOGIC);
@@ -48,39 +49,31 @@ end grid;
 architecture Behavioral of grid is
 
 --types
-Type gridArray is array (0 to 31) of std_logic_vector (0 to 31);--32*32 matrix
+Type gridArray is array (0 to 31) of std_logic_vector (0 to 31);--(about Y) then (about X)
 
 --signals
 signal grid1 : gridArray := (others => (others => '0'));
 signal sig : STD_LOGIC;
-signal gridBeamX : STD_LOGIC_VECTOR (4 downto 0);
-signal gridBeamY : STD_LOGIC_VECTOR (4 downto 0);
 
 begin
-	--grid1(to_integer(unsigned(posY(3 downto 0))))(to_integer(unsigned(posX(3 downto 0)))) <= '1';
-
-	--grid1(to_integer(unsigned(posY)))(to_integer(unsigned(posX))) <= '1';
-	--grid1 <= (others => (others => '0')) when reset='1';
-	
-	process (posX, posY)
+	process (clk, posX, posY)
 	begin
-		for X in 0 to 31 loop
-			for Y in 0 to 31 loop
-				if (reset='1') then
-					grid1(Y)(X) <= '0';
-				elsif (X = to_integer(unsigned(posX(9 downto 5))) and Y = to_integer(unsigned(posY(9 downto 5)))) then
-					grid1(Y)(X) <= '1';
-				else
-					grid1(Y)(X) <= grid1(Y)(X);
-				end if;
+		IF (clk='1') AND (clk'EVENT) THEN -- TRUE sur un front montant de clk
+			for X in 0 to 31 loop
+				for Y in 0 to 31 loop
+					if (reset='1') then
+						grid1(Y)(X) <= '0';
+					elsif (drawEnable='1' and X = to_integer(unsigned(posX(9 downto 5))) and Y = to_integer(unsigned(posY(8 downto 4)))) then
+						grid1(Y)(X) <= '1';
+					else
+						grid1(Y)(X) <= grid1(Y)(X);
+					end if;
+				end loop;
 			end loop;
-		end loop;
+		END IF;
 	end process;
 	
-	gridBeamX <= beamX(9 downto 5);--we divide beamX by 32 to fill gridBeamX
-	gridBeamY <= beamY(9 downto 5);
-	
-	sig <= '1' when (grid1(to_integer(unsigned(gridBeamY)))(to_integer(unsigned(gridBeamX)))='1' and beamValid='1')
+	sig <= '1' when (grid1(to_integer(unsigned(beamY(8 downto 4))))(to_integer(unsigned(beamX(9 downto 5))))='1' and beamValid='1')
 				else '0';
 
 

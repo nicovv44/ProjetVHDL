@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<Interface Version="1" Minor="1">
+	<Ifc Id="ROOT" Top="1">
+		<Port Id="blank" Dir="INOUT"/>
+		<Port Id="blue" Dir="OUT"/>
+		<Port Id="vsync" Dir="OUT"/>
+		<Port Id="green" Dir="OUT"/>
+		<Port Id="reset" Dir="IN"/>
+		<Port Id="drawEnable" Dir="IN"/>
+		<Port Id="freeMove" Dir="IN"/>
+		<Port Id="clk50" Dir="IN"/>
+		<Port Id="posXM" Dir="IN"/>
+		<Port Id="posXP" Dir="IN"/>
+		<Port Id="posYM" Dir="IN"/>
+		<Port Id="posYP" Dir="IN"/>
+		<Port Id="zero" Dir="IN"/>
+		<Port Id="red" Dir="OUT"/>
+		<Port Id="hsync" Dir="OUT"/>
+	</Ifc>
+</Interface>
+

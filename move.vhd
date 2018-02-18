@@ -34,6 +34,8 @@ entity move is
            reset : in  STD_LOGIC;
            posX : inout  STD_LOGIC_VECTOR (9 downto 0);
            posY : inout  STD_LOGIC_VECTOR (9 downto 0);
+			  posXMax : in  STD_LOGIC_VECTOR (9 downto 0);
+			  posYMax : in  STD_LOGIC_VECTOR (9 downto 0);
 			  posXP : in  STD_LOGIC;
 			  posXM : in  STD_LOGIC;
 			  posYP : in  STD_LOGIC;
@@ -81,7 +83,7 @@ posYM2 <= '1' when freeMove = '1'
 								reset => reset,
 								posReset => std_logic_vector(to_unsigned(150, 10)),--on 10 bits
 								posMin =>   std_logic_vector(to_unsigned(0,   10)),--on 10 bits
-								posMax =>   std_logic_vector(to_unsigned(569, 10)),--on 10 bits
+								posMax =>   posXMax,--on 10 bits
 								posP => posXP2,
 								posM => posXM2,
 								subValSelect => subValSelect,
@@ -94,7 +96,7 @@ posYM2 <= '1' when freeMove = '1'
 								reset => reset,
 								posReset => std_logic_vector(to_unsigned(150, 10)),--on 10 bits
 								posMin =>   std_logic_vector(to_unsigned(0,   10)),--on 10 bits
-								posMax =>   std_logic_vector(to_unsigned(475, 10)),--on 10 bits
+								posMax =>   posYMax,--on 10 bits
 								posP => posYP2,
 								posM => posYM2,
 								subValSelect => subValSelect,

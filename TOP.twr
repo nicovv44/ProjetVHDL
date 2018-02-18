@@ -44,12 +44,13 @@ Setup/Hold to clock clk50
             |Max Setup to|Max Hold to |                  | Clock  |
 Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------------+--------+
-freeMove    |    7.182(R)|    0.297(R)|clk50_BUFGP       |   0.000|
-posXM       |    6.650(R)|   -0.353(R)|clk50_BUFGP       |   0.000|
-posXP       |    6.321(R)|   -0.539(R)|clk50_BUFGP       |   0.000|
-posYM       |    5.827(R)|   -1.545(R)|clk50_BUFGP       |   0.000|
-posYP       |    5.788(R)|   -0.910(R)|clk50_BUFGP       |   0.000|
-subValSelect|    7.548(R)|   -2.443(R)|clk50_BUFGP       |   0.000|
+drawEnable  |   11.234(R)|   -1.348(R)|clk50_BUFGP       |   0.000|
+freeMove    |    6.089(R)|   -0.372(R)|clk50_BUFGP       |   0.000|
+posXM       |    4.644(R)|   -0.731(R)|clk50_BUFGP       |   0.000|
+posXP       |    4.449(R)|   -0.240(R)|clk50_BUFGP       |   0.000|
+posYM       |    5.115(R)|   -1.087(R)|clk50_BUFGP       |   0.000|
+posYP       |    4.860(R)|   -0.515(R)|clk50_BUFGP       |   0.000|
+reset       |    2.468(R)|   -0.205(R)|clk50_BUFGP       |   0.000|
 ------------+------------+------------+------------------+--------+
 
 Clock clk50 to Pad
@@ -57,9 +58,9 @@ Clock clk50 to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-blue        |    8.399(R)|clk50_BUFGP       |   0.000|
-green       |    7.826(R)|clk50_BUFGP       |   0.000|
-red         |    8.151(R)|clk50_BUFGP       |   0.000|
+blue        |    8.143(R)|clk50_BUFGP       |   0.000|
+green       |    7.888(R)|clk50_BUFGP       |   0.000|
+red         |    7.897(R)|clk50_BUFGP       |   0.000|
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock clk50
@@ -67,18 +68,18 @@ Clock to Setup on destination clock clk50
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk50          |   13.869|         |         |         |
+clk50          |   14.430|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Sun Feb 18 17:14:14 2018 
+Analysis completed Sun Feb 18 19:04:58 2018 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 207 MB
+Peak Memory Usage: 210 MB
 
 
 

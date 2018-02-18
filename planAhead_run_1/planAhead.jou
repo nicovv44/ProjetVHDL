@@ -1,0 +1,64 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Sun Feb 18 18:56:03 2018
+# Process ID: 3096
+# Log file: C:/Users/FONTEILLE/Desktop/ISE/Project1.2/planAhead_run_1/planAhead.log
+# Journal file: C:/Users/FONTEILLE/Desktop/ISE/Project1.2/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source C:/Users/FONTEILLE/Desktop/ISE/Project1.2/pa.fromNetlist.tcl
+startgroup
+set_property package_pin C9 [get_ports clk50]
+endgroup
+startgroup
+set_property package_pin G15 [get_ports blue]
+endgroup
+startgroup
+set_property package_pin H15 [get_ports green]
+endgroup
+startgroup
+set_property package_pin F15 [get_ports hsync]
+endgroup
+startgroup
+set_property package_pin D18 [get_ports posXM]
+endgroup
+startgroup
+set_property package_pin H13 [get_ports posXP]
+endgroup
+startgroup
+set_property package_pin V4 [get_ports posYM]
+endgroup
+startgroup
+set_property package_pin K17 [get_ports posYP]
+endgroup
+startgroup
+set_property package_pin H14 [get_ports red]
+endgroup
+startgroup
+set_property package_pin L13 [get_ports reset]
+endgroup
+startgroup
+set_property package_pin F14 [get_ports vsync]
+endgroup
+startgroup
+set_property package_pin H18 [get_ports zero]
+endgroup
+startgroup
+set_property package_pin L14 [get_ports freeMove]
+endgroup
+startgroup
+set_property package_pin N17 [get_ports drawEnable]
+endgroup
+startgroup
+set_property package_pin L14 [get_ports freeMove]
+endgroup
+set_property pulltype PULLDOWN [get_ports [list freeMove]]
+set_property pulltype PULLDOWN [get_ports [list drawEnable]]
+set_property pulltype PULLDOWN [get_ports [list posXM]]
+set_property pulltype PULLDOWN [get_ports [list posXP]]
+set_property pulltype PULLDOWN [get_ports [list posYM]]
+set_property pulltype PULLDOWN [get_ports [list posYP]]
+set_property pulltype PULLDOWN [get_ports [list reset]]
+set_property pulltype PULLDOWN [get_ports [list zero]]
+save_constraints
