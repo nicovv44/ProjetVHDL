@@ -42,6 +42,7 @@ entity grid is
            posY : in  STD_LOGIC_VECTOR (9 downto 0);
 			  drawEnable : in  STD_LOGIC;
 			  lunchLife : in STD_LOGIC;
+			  refreshLife : in STD_LOGIC;
            redOut : out  STD_LOGIC;
            greenOut : out  STD_LOGIC;
            blueOut : out  STD_LOGIC);
@@ -57,7 +58,7 @@ signal grid1 : gridArray := (others => (others => '0'));
 signal sig : STD_LOGIC;
 
 begin
-	process (clk, reset)
+	process (clk, reset, refreshLife)
 	variable nbVoisin : integer := 0;--nombre de voisin de la case centrale
 	begin
 		IF (clk='1') AND (clk'EVENT) THEN -- TRUE sur un front montant de clk
@@ -86,13 +87,13 @@ begin
 							end loop;
 						end loop;
 						--on modifie la case centrale (Y+1)(X+1)
-						if (reset='1') then
+						if (refreshLife='1' and         reset='1'                      ) then
 							grid1(Y+1)(X+1) <= '0';
-						elsif (nbVoisin = 3) then
+						elsif (refreshLife='1' and      nbVoisin = 3                   ) then
 							grid1(Y+1)(X+1) <= '1';
-						elsif (nbVoisin = 2) then
+						elsif (refreshLife='1' and      nbVoisin = 2                   ) then
 							grid1(Y+1)(X+1) <= grid1(Y+1)(X+1);
-						elsif (nbVoisin < 2 or 3 < nbVoisin) then
+						elsif (refreshLife='1' and     (nbVoisin < 2 or 3 < nbVoisin)  ) then
 							grid1(Y+1)(X+1) <= '0';
 						end if;
 					end loop;

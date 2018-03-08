@@ -124,15 +124,23 @@ component grid is
            posY : in  STD_LOGIC_VECTOR (9 downto 0);
 			  drawEnable : in  STD_LOGIC;
 			  lunchLife : in STD_LOGIC;
+			  refreshLife : in STD_LOGIC;
            redOut : out  STD_LOGIC;
            greenOut : out  STD_LOGIC;
            blueOut : out  STD_LOGIC);
+end component;
+component clkSub is
+	Port ( clk : in  STD_LOGIC;
+           reset : in  STD_LOGIC;
+			  subVal : in  STD_LOGIC_VECTOR (25 downto 0);
+           clks : inout  STD_LOGIC);
 end component;
 
 --signals
 signal beamXBus : std_logic_VECTOR (9 downto 0);
 signal beamYBus : std_logic_VECTOR (9 downto 0);
 signal beamValidWire : std_logic;
+signal refreshLife : std_logic;
 --going to ControlVGA
 signal redWire : std_logic;
 signal greenWire : std_logic;
@@ -183,11 +191,20 @@ begin
 									blue => '0',
 									drawEnable => drawEnable,
 									lunchLife => lunchLife,
+									refreshLife => refreshLife,
 									--out
 									redOut => redGrid,
 									greenOut => greenGrid,
 									blueOut => blueGrid
 									);
+		CLKS1 : clkSub port map(
+								--in
+								clk => clk50,
+								reset => reset,
+								subVal => "10111110101111000010000000",-- 50,000,000 on 26 bits
+								--inout
+								clks => refreshLife
+								);
 		SHAPES1 : shapes port map(
 									--in
 									clk => clk50,
