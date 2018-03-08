@@ -1,5 +1,4 @@
 
-# PlanAhead Generated physical constraints 
 
 NET "clk50" LOC = C9;
 NET "blue" LOC = G15;
@@ -12,11 +11,10 @@ NET "posYP" LOC = K17;
 NET "red" LOC = H14;
 NET "reset" LOC = L13;
 NET "vsync" LOC = F14;
-NET "zero" LOC = H18;
+NET "lunchLife" LOC = H18;
 NET "drawEnable" LOC = N17;
 NET "freeMove" LOC = L14;
 
-# PlanAhead Generated IO constraints 
 
 NET "freeMove" PULLDOWN;
 NET "drawEnable" PULLDOWN;
@@ -25,4 +23,6 @@ NET "posXP" PULLDOWN;
 NET "posYM" PULLDOWN;
 NET "posYP" PULLDOWN;
 NET "reset" PULLDOWN;
-NET "zero" PULLDOWN;
+NET "lunchLife" PULLDOWN;
+
+

@@ -44,13 +44,14 @@ Setup/Hold to clock clk50
             |Max Setup to|Max Hold to |                  | Clock  |
 Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------------+--------+
-drawEnable  |   11.484(R)|   -1.252(R)|clk50_BUFGP       |   0.000|
-freeMove    |    8.392(R)|   -0.545(R)|clk50_BUFGP       |   0.000|
-posXM       |    7.653(R)|   -0.484(R)|clk50_BUFGP       |   0.000|
-posXP       |    4.565(R)|    0.202(R)|clk50_BUFGP       |   0.000|
-posYM       |    5.731(R)|   -1.051(R)|clk50_BUFGP       |   0.000|
-posYP       |    5.354(R)|   -0.884(R)|clk50_BUFGP       |   0.000|
-reset       |    3.974(R)|    0.043(R)|clk50_BUFGP       |   0.000|
+drawEnable  |    6.157(R)|   -0.409(R)|clk50_BUFGP       |   0.000|
+freeMove    |    7.059(R)|   -0.534(R)|clk50_BUFGP       |   0.000|
+lunchLife   |   10.877(R)|    0.694(R)|clk50_BUFGP       |   0.000|
+posXM       |    5.069(R)|   -0.868(R)|clk50_BUFGP       |   0.000|
+posXP       |    6.371(R)|   -0.259(R)|clk50_BUFGP       |   0.000|
+posYM       |    6.563(R)|   -1.193(R)|clk50_BUFGP       |   0.000|
+posYP       |    4.335(R)|   -0.796(R)|clk50_BUFGP       |   0.000|
+reset       |   11.005(R)|    0.542(R)|clk50_BUFGP       |   0.000|
 ------------+------------+------------+------------------+--------+
 
 Clock clk50 to Pad
@@ -58,9 +59,9 @@ Clock clk50 to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-blue        |    9.057(R)|clk50_BUFGP       |   0.000|
-green       |    8.216(R)|clk50_BUFGP       |   0.000|
-red         |    9.308(R)|clk50_BUFGP       |   0.000|
+blue        |    8.182(R)|clk50_BUFGP       |   0.000|
+green       |    8.546(R)|clk50_BUFGP       |   0.000|
+red         |    8.753(R)|clk50_BUFGP       |   0.000|
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock clk50
@@ -68,18 +69,18 @@ Clock to Setup on destination clock clk50
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk50          |   14.069|         |         |         |
+clk50          |   14.240|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Sun Feb 18 19:38:19 2018 
+Analysis completed Thu Mar 08 17:29:03 2018 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 239 MB
+Peak Memory Usage: 247 MB
 
 
 

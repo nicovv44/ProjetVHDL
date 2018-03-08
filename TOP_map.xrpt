@@ -5,7 +5,7 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="Map" timeStamp="Sun Feb 18 19:31:59 2018">
+  <application stringID="Map" timeStamp="Thu Mar 08 17:21:20 2018">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
@@ -69,16 +69,16 @@
         <item dataType="int" stringID="MAP_NUM_ERRORS" value="0"/>
         <item dataType="int" stringID="MAP_FILTERED_WARNINGS" value="0"/>
         <item dataType="int" stringID="MAP_NUM_WARNINGS" value="0"/>
-        <item UNITS="KB" dataType="int" stringID="MAP_PEAK_MEMORY" value="328500"/>
-        <item stringID="MAP_TOTAL_REAL_TIME" value="8 secs "/>
-        <item stringID="MAP_TOTAL_CPU_TIME" value="8 secs "/>
+        <item UNITS="KB" dataType="int" stringID="MAP_PEAK_MEMORY" value="375844"/>
+        <item stringID="MAP_TOTAL_REAL_TIME" value="11 secs "/>
+        <item stringID="MAP_TOTAL_CPU_TIME" value="11 secs "/>
       </section>
       <section stringID="MAP_SLICE_REPORTING">
-        <item AVAILABLE="9312" dataType="int" label="Number of Slice Flip Flops" stringID="MAP_NUM_SLICE_FF" value="2341"/>
-        <item AVAILABLE="9312" dataType="int" label="Number of 4 input LUTs" stringID="MAP_NUM_4_INPUT_LUT" value="4867">
+        <item AVAILABLE="9312" dataType="int" label="Number of Slice Flip Flops" stringID="MAP_NUM_SLICE_FF" value="805"/>
+        <item AVAILABLE="9312" dataType="int" label="Number of 4 input LUTs" stringID="MAP_NUM_4_INPUT_LUT" value="8024">
           <item dataType="int" label="Number of route-thrus" stringID="MAP_NUM_LUT_RT" value="313"/>
         </item>
-        <item AVAILABLE="4656" dataType="int" label="Number of occupied Slices" stringID="MAP_OCCUPIED_SLICES" value="4515">
+        <item AVAILABLE="4656" dataType="int" label="Number of occupied Slices" stringID="MAP_OCCUPIED_SLICES" value="4253">
           <item dataType="int" label="Number of Slices containing unrelated logic" stringID="MAP_NUM_SLICE_UNRELATED" value="0"/>
         </item>
       </section>
@@ -166,7 +166,7 @@
             <item label="IOB&#xA;Delay" stringID="IOB_DELAY" value="0 / 0"/>
           </row>
           <row stringID="row" value="8">
-            <item label="IOB&#xA;Name" sort="smart" stringID="IOB_NAME" value="posXM"/>
+            <item label="IOB&#xA;Name" sort="smart" stringID="IOB_NAME" value="lunchLife"/>
             <item stringID="Type" value="IBUF"/>
             <item stringID="Direction" value="INPUT"/>
             <item label="IO&#xA;Standard" sort="smart" stringID="IO_STANDARD" value="LVCMOS25"/>
@@ -174,7 +174,7 @@
             <item label="IOB&#xA;Delay" stringID="IOB_DELAY" value="0 / 0"/>
           </row>
           <row stringID="row" value="9">
-            <item label="IOB&#xA;Name" sort="smart" stringID="IOB_NAME" value="posXP"/>
+            <item label="IOB&#xA;Name" sort="smart" stringID="IOB_NAME" value="posXM"/>
             <item stringID="Type" value="IBUF"/>
             <item stringID="Direction" value="INPUT"/>
             <item label="IO&#xA;Standard" sort="smart" stringID="IO_STANDARD" value="LVCMOS25"/>
@@ -182,7 +182,7 @@
             <item label="IOB&#xA;Delay" stringID="IOB_DELAY" value="0 / 0"/>
           </row>
           <row stringID="row" value="10">
-            <item label="IOB&#xA;Name" sort="smart" stringID="IOB_NAME" value="posYM"/>
+            <item label="IOB&#xA;Name" sort="smart" stringID="IOB_NAME" value="posXP"/>
             <item stringID="Type" value="IBUF"/>
             <item stringID="Direction" value="INPUT"/>
             <item label="IO&#xA;Standard" sort="smart" stringID="IO_STANDARD" value="LVCMOS25"/>
@@ -190,7 +190,7 @@
             <item label="IOB&#xA;Delay" stringID="IOB_DELAY" value="0 / 0"/>
           </row>
           <row stringID="row" value="11">
-            <item label="IOB&#xA;Name" sort="smart" stringID="IOB_NAME" value="posYP"/>
+            <item label="IOB&#xA;Name" sort="smart" stringID="IOB_NAME" value="posYM"/>
             <item stringID="Type" value="IBUF"/>
             <item stringID="Direction" value="INPUT"/>
             <item label="IO&#xA;Standard" sort="smart" stringID="IO_STANDARD" value="LVCMOS25"/>
@@ -198,6 +198,14 @@
             <item label="IOB&#xA;Delay" stringID="IOB_DELAY" value="0 / 0"/>
           </row>
           <row stringID="row" value="12">
+            <item label="IOB&#xA;Name" sort="smart" stringID="IOB_NAME" value="posYP"/>
+            <item stringID="Type" value="IBUF"/>
+            <item stringID="Direction" value="INPUT"/>
+            <item label="IO&#xA;Standard" sort="smart" stringID="IO_STANDARD" value="LVCMOS25"/>
+            <item stringID="Resistor" value="PULLDOWN"/>
+            <item label="IOB&#xA;Delay" stringID="IOB_DELAY" value="0 / 0"/>
+          </row>
+          <row stringID="row" value="13">
             <item label="IOB&#xA;Name" sort="smart" stringID="IOB_NAME" value="red"/>
             <item stringID="Type" value="IOB"/>
             <item stringID="Direction" value="OUTPUT"/>
@@ -206,7 +214,7 @@
             <item label="Slew&#xA;Rate" stringID="SLEW_RATE" value="SLOW"/>
             <item label="IOB&#xA;Delay" stringID="IOB_DELAY" value="0 / 0"/>
           </row>
-          <row stringID="row" value="13">
+          <row stringID="row" value="14">
             <item label="IOB&#xA;Name" sort="smart" stringID="IOB_NAME" value="reset"/>
             <item stringID="Type" value="IBUF"/>
             <item stringID="Direction" value="INPUT"/>
@@ -214,7 +222,7 @@
             <item stringID="Resistor" value="PULLDOWN"/>
             <item label="IOB&#xA;Delay" stringID="IOB_DELAY" value="0 / 0"/>
           </row>
-          <row stringID="row" value="14">
+          <row stringID="row" value="15">
             <item label="IOB&#xA;Name" sort="smart" stringID="IOB_NAME" value="vsync"/>
             <item stringID="Type" value="IOB"/>
             <item stringID="Direction" value="OUTPUT"/>
@@ -223,19 +231,11 @@
             <item label="Slew&#xA;Rate" stringID="SLEW_RATE" value="SLOW"/>
             <item label="IOB&#xA;Delay" stringID="IOB_DELAY" value="0 / 0"/>
           </row>
-          <row stringID="row" value="15">
-            <item label="IOB&#xA;Name" sort="smart" stringID="IOB_NAME" value="zero"/>
-            <item stringID="Type" value="IBUF"/>
-            <item stringID="Direction" value="INPUT"/>
-            <item label="IO&#xA;Standard" sort="smart" stringID="IO_STANDARD" value="LVCMOS25"/>
-            <item stringID="Resistor" value="PULLDOWN"/>
-            <item label="IOB&#xA;Delay" stringID="IOB_DELAY" value="0 / 0"/>
-          </row>
         </table>
       </section>
       <section stringID="MAP_RPM_MACROS">
         <section stringID="MAP_SHAPE_SECTION">
-          <item dataType="int" stringID="MAP_NUM_SHAPE" value="140"/>
+          <item dataType="int" stringID="MAP_NUM_SHAPE" value="91"/>
         </section>
       </section>
       <section stringID="MAP_GUIDE_REPORT"/>

@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Mon Mar 05 11:38:23 2018
+# Process ID: 4732
+# Log file: C:/Users/FONTEILLE/Desktop/ISE/Project1.2/planAhead_run_2/planAhead.log
+# Journal file: C:/Users/FONTEILLE/Desktop/ISE/Project1.2/planAhead_run_2/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source C:/Users/FONTEILLE/Desktop/ISE/Project1.2/pa.fromNetlist.tcl
+startgroup
+set_property package_pin H18 [get_ports lunchLife]
+endgroup
+set_property pulltype PULLDOWN [get_ports [list lunchLife]]
+save_constraints

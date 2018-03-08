@@ -38,7 +38,7 @@ entity TOP is
 			  posYP : in  STD_LOGIC;
 			  posYM : in  STD_LOGIC;
 			  freeMove : in STD_LOGIC;
-			  zero : in STD_LOGIC;
+			  lunchLife : in STD_LOGIC;
 			  drawEnable : in STD_LOGIC;
            red : out  STD_LOGIC;
            green : out  STD_LOGIC;
@@ -123,6 +123,7 @@ component grid is
            posX : in  STD_LOGIC_VECTOR (9 downto 0);
            posY : in  STD_LOGIC_VECTOR (9 downto 0);
 			  drawEnable : in  STD_LOGIC;
+			  lunchLife : in STD_LOGIC;
            redOut : out  STD_LOGIC;
            greenOut : out  STD_LOGIC;
            blueOut : out  STD_LOGIC);
@@ -181,6 +182,7 @@ begin
 									green => '1',
 									blue => '0',
 									drawEnable => drawEnable,
+									lunchLife => lunchLife,
 									--out
 									redOut => redGrid,
 									greenOut => greenGrid,
@@ -236,7 +238,7 @@ begin
 									--in
 									clk50 => clk50,
 									reset => reset,
-									zero => zero,
+									zero => '0',
 									--out
 									val => valWire
 									);

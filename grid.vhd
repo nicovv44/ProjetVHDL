@@ -41,6 +41,7 @@ entity grid is
            posX : in  STD_LOGIC_VECTOR (9 downto 0);
            posY : in  STD_LOGIC_VECTOR (9 downto 0);
 			  drawEnable : in  STD_LOGIC;
+			  lunchLife : in STD_LOGIC;
            redOut : out  STD_LOGIC;
            greenOut : out  STD_LOGIC;
            blueOut : out  STD_LOGIC);
@@ -49,31 +50,58 @@ end grid;
 architecture Behavioral of grid is
 
 --types
-Type gridArray is array (0 to 31) of std_logic_vector (0 to 63);--(about Y) then (about X)
+Type gridArray is array (0 to 15) of std_logic_vector (0 to 31);--(about Y) then (about X)
 
 --signals
 signal grid1 : gridArray := (others => (others => '0'));
 signal sig : STD_LOGIC;
 
 begin
-	process (clk, posX, posY)
+	process (clk, reset)
+	variable nbVoisin : integer := 0;--nombre de voisin de la case centrale
 	begin
 		IF (clk='1') AND (clk'EVENT) THEN -- TRUE sur un front montant de clk
-			for X in 0 to 63 loop
-				for Y in 0 to 31 loop
-					if (reset='1') then
-						grid1(Y)(X) <= '0';
-					elsif (drawEnable='1' and X = to_integer(unsigned(posX(9 downto 4))) and Y = to_integer(unsigned(posY(8 downto 4)))) then
-						grid1(Y)(X) <= '1';
-					else
-						grid1(Y)(X) <= grid1(Y)(X);
-					end if;
+			if lunchLife = '0' then--parametrage de l'etat initial
+				for X in 0 to 31 loop
+					for Y in 0 to 15 loop
+						if (reset='1') then
+							grid1(Y)(X) <= '0';
+						elsif (drawEnable='1' and X = to_integer(unsigned(posX(9 downto 5))) and Y = to_integer(unsigned(posY(8 downto 5)))) then
+							grid1(Y)(X) <= '1';
+						else
+							grid1(Y)(X) <= grid1(Y)(X);
+						end if;
+					end loop;
 				end loop;
-			end loop;
+			else--code pour modifier grid1 selon le jeu de la vie
+				for X in 0 to 29 loop
+					for Y in 0 to 13 loop
+						--on compte le nombre de voisin
+						nbVoisin := 0;
+						for X1 in 0 to 2 loop
+							for Y1 in 0 to 2 loop
+								if (grid1(Y+Y1)(X+X1)='1' and not (X1 = 1 and Y1 = 1)) then 
+									nbVoisin := nbVoisin +1;
+								end if;
+							end loop;
+						end loop;
+						--on modifie la case centrale (Y+1)(X+1)
+						if (reset='1') then
+							grid1(Y+1)(X+1) <= '0';
+						elsif (nbVoisin = 3) then
+							grid1(Y+1)(X+1) <= '1';
+						elsif (nbVoisin = 2) then
+							grid1(Y+1)(X+1) <= grid1(Y+1)(X+1);
+						elsif (nbVoisin < 2 or 3 < nbVoisin) then
+							grid1(Y+1)(X+1) <= '0';
+						end if;
+					end loop;
+				end loop;
+			END IF;
 		END IF;
 	end process;
 	
-	sig <= '1' when (grid1(to_integer(unsigned(beamY(8 downto 4))))(to_integer(unsigned(beamX(9 downto 4))))='1' and beamValid='1')
+	sig <= '1' when (grid1(to_integer(unsigned(beamY(8 downto 5))))(to_integer(unsigned(beamX(9 downto 5))))='1' and beamValid='1')
 				else '0';
 
 

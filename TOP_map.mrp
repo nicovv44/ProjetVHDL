@@ -9,22 +9,22 @@ Target Device  : xc3s500e
 Target Package : fg320
 Target Speed   : -4
 Mapper Version : spartan3e -- $Revision: 1.55 $
-Mapped Date    : Sun Feb 18 19:31:51 2018
+Mapped Date    : Thu Mar 08 17:21:09 2018
 
 Design Summary
 --------------
 Number of errors:      0
 Number of warnings:    0
 Logic Utilization:
-  Number of Slice Flip Flops:         2,341 out of   9,312   25%
-  Number of 4 input LUTs:             4,554 out of   9,312   48%
+  Number of Slice Flip Flops:           805 out of   9,312    8%
+  Number of 4 input LUTs:             7,711 out of   9,312   82%
 Logic Distribution:
-  Number of occupied Slices:          4,515 out of   4,656   96%
-    Number of Slices containing only related logic:   4,515 out of   4,515 100%
-    Number of Slices containing unrelated logic:          0 out of   4,515   0%
+  Number of occupied Slices:          4,253 out of   4,656   91%
+    Number of Slices containing only related logic:   4,253 out of   4,253 100%
+    Number of Slices containing unrelated logic:          0 out of   4,253   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:       4,867 out of   9,312   52%
-    Number used as logic:             4,554
+  Total Number of 4 input LUTs:       8,024 out of   9,312   86%
+    Number used as logic:             7,711
     Number used as a route-thru:        313
 
   The Slice Logic Distribution report is not meaningful if the design is
@@ -33,11 +33,11 @@ Logic Distribution:
   Number of bonded IOBs:                 15 out of     232    6%
   Number of BUFGMUXs:                     2 out of      24    8%
 
-Average Fanout of Non-Clock Nets:                2.70
+Average Fanout of Non-Clock Nets:                3.71
 
-Peak Memory Usage:  321 MB
-Total REAL time to MAP completion:  8 secs 
-Total CPU time to MAP completion:   8 secs 
+Peak Memory Usage:  367 MB
+Total REAL time to MAP completion:  11 secs 
+Total CPU time to MAP completion:   11 secs 
 
 NOTES:
 
@@ -115,6 +115,7 @@ Section 6 - IOB Properties
 | freeMove                           | IBUF             | INPUT     | LVCMOS25             |       |          |      |              | PULLDOWN | 0 / 0    |
 | green                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
 | hsync                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| lunchLife                          | IBUF             | INPUT     | LVCMOS25             |       |          |      |              | PULLDOWN | 0 / 0    |
 | posXM                              | IBUF             | INPUT     | LVCMOS25             |       |          |      |              | PULLDOWN | 0 / 0    |
 | posXP                              | IBUF             | INPUT     | LVCMOS25             |       |          |      |              | PULLDOWN | 0 / 0    |
 | posYM                              | IBUF             | INPUT     | LVCMOS25             |       |          |      |              | PULLDOWN | 0 / 0    |
@@ -122,7 +123,6 @@ Section 6 - IOB Properties
 | red                                | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
 | reset                              | IBUF             | INPUT     | LVCMOS25             |       |          |      |              | PULLDOWN | 0 / 0    |
 | vsync                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
-| zero                               | IBUF             | INPUT     | LVCMOS25             |       |          |      |              | PULLDOWN | 0 / 0    |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Section 7 - RPMs

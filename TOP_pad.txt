@@ -1,7 +1,7 @@
 Release 14.7 - par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Sun Feb 18 19:38:09 2018
+Thu Mar 08 17:28:51 2018
 
 
 INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:
@@ -51,7 +51,7 @@ Pinout by Pin Number:
 |B11       |           |IOB      |IO/VREF_0                |UNUSED   |           |0             |          |         |           |         |         |          |           |                |
 |B12       |           |         |VCCAUX                   |         |           |              |          |         |           |         |2.5      |          |           |                |
 |B13       |           |DIFFS    |IO_L05N_0/VREF_0         |UNUSED   |           |0             |          |         |           |         |         |          |           |                |
-|B14       |           |DIFFM    |IO_L04P_0                |UNUSED   |           |0             |          |         |           |         |         |          |           |                |
+|B14       |blank      |IOB      |IO_L04P_0                |OUTPUT   |LVCMOS25*  |0             |12        |SLOW     |NONE**     |         |         |UNLOCATED |NO         |NONE            |
 |B15       |           |DIFFMI   |IP_L02P_0                |UNUSED   |           |0             |          |         |           |         |         |          |           |                |
 |B16       |           |DIFFM    |IO_L01P_0                |UNUSED   |           |0             |          |         |           |         |         |          |           |                |
 |B17       |           |         |GND                      |         |           |              |          |         |           |         |         |          |           |                |
@@ -141,7 +141,7 @@ Pinout by Pin Number:
 |G11       |           |         |VCCO_0                   |         |           |0             |          |         |           |         |2.50     |          |           |                |
 |G12       |           |         |GND                      |         |           |              |          |         |           |         |         |          |           |                |
 |G13       |           |DIFFS    |IO_L20N_1                |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
-|G14       |blank      |IOB      |IO_L20P_1                |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |NONE**     |         |         |UNLOCATED |NO         |NONE            |
+|G14       |           |DIFFM    |IO_L20P_1                |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
 |G15       |blue       |IOB      |IO_L18P_1                |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |NONE**     |         |         |LOCATED   |NO         |NONE            |
 |G16       |           |DIFFS    |IO_L18N_1                |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
 |G17       |           |         |VCCAUX                   |         |           |              |          |         |           |         |2.5      |          |           |                |
@@ -163,7 +163,7 @@ Pinout by Pin Number:
 |H15       |green      |IOB      |IO_L17N_1                |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |NONE**     |         |         |LOCATED   |NO         |NONE            |
 |H16       |           |DIFFM    |IO_L16P_1                |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
 |H17       |           |DIFFS    |IO_L16N_1/A0             |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
-|H18       |zero       |IBUF     |IP/VREF_1                |INPUT    |LVCMOS25*  |1             |          |         |PULLDOWN   |NONE     |         |LOCATED   |NO         |NONE            |
+|H18       |lunchLife  |IBUF     |IP/VREF_1                |INPUT    |LVCMOS25*  |1             |          |         |PULLDOWN   |NONE     |         |LOCATED   |NO         |NONE            |
 |J1        |           |DIFFM    |IO_L12P_3/LHCLK2         |UNUSED   |           |3             |          |         |           |         |         |          |           |                |
 |J2        |           |DIFFS    |IO_L12N_3/LHCLK3/IRDY2   |UNUSED   |           |3             |          |         |           |         |         |          |           |                |
 |J3        |           |         |GND                      |         |           |              |          |         |           |         |         |          |           |                |
