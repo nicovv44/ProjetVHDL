@@ -51,7 +51,7 @@ end grid;
 architecture Behavioral of grid is
 
 --types
-Type gridArray is array (0 to 15) of std_logic_vector (0 to 31);--(about Y) then (about X)
+Type gridArray is array (0 to 7) of std_logic_vector (0 to 15);--(about Y) then (about X)
 
 --signals
 signal grid1 : gridArray := (others => (others => '0'));
@@ -63,11 +63,11 @@ begin
 	begin
 		IF (clk='1') AND (clk'EVENT) THEN -- TRUE sur un front montant de clk
 			if lunchLife = '0' then--parametrage de l'etat initial
-				for X in 0 to 31 loop
-					for Y in 0 to 15 loop
+				for X in 0 to 15 loop
+					for Y in 0 to 7 loop
 						if (reset='1') then
 							grid1(Y)(X) <= '0';
-						elsif (drawEnable='1' and X = to_integer(unsigned(posX(9 downto 5))) and Y = to_integer(unsigned(posY(8 downto 5)))) then
+						elsif (drawEnable='1' and X = to_integer(unsigned(posX(9 downto 6))) and Y = to_integer(unsigned(posY(8 downto 6)))) then
 							grid1(Y)(X) <= '1';
 						else
 							grid1(Y)(X) <= grid1(Y)(X);
@@ -75,8 +75,8 @@ begin
 					end loop;
 				end loop;
 			else--code pour modifier grid1 selon le jeu de la vie
-				for X in 0 to 29 loop
-					for Y in 0 to 13 loop
+				for X in 0 to 13 loop
+					for Y in 0 to 5 loop
 						--on compte le nombre de voisin
 						nbVoisin := 0;
 						for X1 in 0 to 2 loop
@@ -102,7 +102,7 @@ begin
 		END IF;
 	end process;
 	
-	sig <= '1' when (grid1(to_integer(unsigned(beamY(8 downto 5))))(to_integer(unsigned(beamX(9 downto 5))))='1' and beamValid='1')
+	sig <= '1' when (grid1(to_integer(unsigned(beamY(8 downto 6))))(to_integer(unsigned(beamX(9 downto 6))))='1' and beamValid='1')
 				else '0';
 
 
