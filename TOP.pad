@@ -1,7 +1,7 @@
 Release 14.7 - par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Tue Mar 13 11:24:56 2018
+Wed Mar 14 15:39:38 2018
 
 
 # NOTE: This file is designed to be imported into a spreadsheet program
@@ -31,7 +31,7 @@ A9|||VCCO_0|||0|||||2.50||||
 A10||DIFFS|IO_L12N_0/GCLK7|UNUSED||0|||||||||
 A11||IOB|IO|UNUSED||0|||||||||
 A12|||NC||||||||||||
-A13|blank|IOB|IO_L05P_0|OUTPUT|LVCMOS25*|0|12|SLOW|NONE**|||UNLOCATED|NO|NONE|
+A13||DIFFM|IO_L05P_0|UNUSED||0|||||||||
 A14||DIFFS|IO_L04N_0|UNUSED||0|||||||||
 A15||DIFFSI|IP_L02N_0|UNUSED||0|||||||||
 A16||DIFFS|IO_L01N_0|UNUSED||0|||||||||
@@ -119,7 +119,7 @@ F7||DIFFM|IO_L19P_0|UNUSED||0|||||||||
 F8||DIFFS|IO_L17N_0|UNUSED||0|||||||||
 F9||DIFFS|IO_L15N_0|UNUSED||0|||||||||
 F10||DIFFMI|IP_L10P_0|UNUSED||0|||||||||
-F11||DIFFS|IO_L08N_0|UNUSED||0|||||||||
+F11|blank|IOB|IO_L08N_0|OUTPUT|LVCMOS25*|0|12|SLOW|NONE**|||UNLOCATED|NO|NONE|
 F12||DIFFM|IO_L06P_0|UNUSED||0|||||||||
 F13|||VCCINT||||||||1.2||||
 F14|vsync|IOB|IO_L21N_1|OUTPUT|LVCMOS25*|1|12|SLOW|NONE**|||LOCATED|NO|NONE|
@@ -336,7 +336,7 @@ V12||DIFFM|IO_L19P_2|UNUSED||2|||||||||
 V13||DIFFS|IO_L19N_2/VREF_2|UNUSED||2|||||||||
 V14||DIFFMI|IP_L23P_2|UNUSED||2|||||||||
 V15||DIFFM|IO_L25P_2/VS2/A19|UNUSED||2|||||||||
-V16||IBUF|IP|UNUSED||2|||||||||
+V16|lifeStepButton|IBUF|IP|INPUT|LVCMOS25*|2|||PULLDOWN|NONE||LOCATED|NO|NONE|
 V17|||DONE||||||||||||
 V18|||GND||||||||||||
 

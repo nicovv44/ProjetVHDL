@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.17 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.17 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Reading design: TOP.prj
 
@@ -119,8 +119,7 @@ Architecture behavioral of Entity clkdiv is up to date.
 Compiling vhdl file "C:/Users/FONTEILLE/Desktop/ISE/Project1.2/rectangle.vhd" in Library work.
 Architecture behavioral of Entity rectangle is up to date.
 Compiling vhdl file "C:/Users/FONTEILLE/Desktop/ISE/Project1.2/grid.vhd" in Library work.
-Entity <grid> compiled.
-Entity <grid> (Architecture <behavioral>) compiled.
+Architecture behavioral of Entity grid is up to date.
 Compiling vhdl file "C:/Users/FONTEILLE/Desktop/ISE/Project1.2/shapes.vhd" in Library work.
 Architecture behavioral of Entity shapes is up to date.
 Compiling vhdl file "C:/Users/FONTEILLE/Desktop/ISE/Project1.2/move.vhd" in Library work.
@@ -132,7 +131,8 @@ Architecture behavioral of Entity hex32 is up to date.
 Compiling vhdl file "C:/Users/FONTEILLE/Desktop/ISE/Project1.2/controlVGA.vhd" in Library work.
 Architecture rtl of Entity controlvga is up to date.
 Compiling vhdl file "C:/Users/FONTEILLE/Desktop/ISE/Project1.2/TOP.vhd" in Library work.
-Architecture behavioral of Entity top is up to date.
+Entity <top> compiled.
+Entity <top> (Architecture <behavioral>) compiled.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
@@ -140,8 +140,6 @@ Architecture behavioral of Entity top is up to date.
 Analyzing hierarchy for entity <TOP> in library <work> (architecture <behavioral>).
 
 Analyzing hierarchy for entity <grid> in library <work> (architecture <behavioral>).
-
-Analyzing hierarchy for entity <clkSub> in library <work> (architecture <behavioral>).
 
 Analyzing hierarchy for entity <shapes> in library <work> (architecture <behavioral>).
 
@@ -177,9 +175,6 @@ Entity <TOP> analyzed. Unit <TOP> generated.
 Analyzing Entity <grid> in library <work> (Architecture <behavioral>).
 Entity <grid> analyzed. Unit <grid> generated.
 
-Analyzing Entity <clkSub> in library <work> (Architecture <behavioral>).
-Entity <clkSub> analyzed. Unit <clkSub> generated.
-
 Analyzing Entity <shapes> in library <work> (Architecture <behavioral>).
 Entity <shapes> analyzed. Unit <shapes> generated.
 
@@ -194,6 +189,9 @@ Entity <move> analyzed. Unit <move> generated.
 
 Analyzing Entity <mover> in library <work> (Architecture <behavioral>).
 Entity <mover> analyzed. Unit <mover> generated.
+
+Analyzing Entity <clkSub> in library <work> (Architecture <behavioral>).
+Entity <clkSub> analyzed. Unit <clkSub> generated.
 
 Analyzing Entity <valInc> in library <work> (Architecture <behavioral>).
 Entity <valInc> analyzed. Unit <valInc> generated.
@@ -994,19 +992,6 @@ WARNING:Xst:647 - Input <posY<5:0>> is never used. This port will be preserved a
 Unit <grid> synthesized.
 
 
-Synthesizing Unit <clkSub>.
-    Related source file is "C:/Users/FONTEILLE/Desktop/ISE/Project1.2/clkSub.vhd".
-    Found 1-bit register for signal <clks>.
-    Found 26-bit comparator equal for signal <flag$cmp_eq0000> created at line 51.
-    Found 26-bit register for signal <val>.
-    Found 26-bit adder for signal <valMux$addsub0000> created at line 53.
-    Summary:
-	inferred  27 D-type flip-flop(s).
-	inferred   1 Adder/Subtractor(s).
-	inferred   1 Comparator(s).
-Unit <clkSub> synthesized.
-
-
 Synthesizing Unit <valInc>.
     Related source file is "C:/Users/FONTEILLE/Desktop/ISE/Project1.2/valInc.vhd".
     Found 32-bit up counter for signal <val>.
@@ -1073,6 +1058,19 @@ Synthesizing Unit <rectangle>.
     Summary:
 	inferred   4 Comparator(s).
 Unit <rectangle> synthesized.
+
+
+Synthesizing Unit <clkSub>.
+    Related source file is "C:/Users/FONTEILLE/Desktop/ISE/Project1.2/clkSub.vhd".
+    Found 1-bit register for signal <clks>.
+    Found 26-bit comparator equal for signal <flag$cmp_eq0000> created at line 51.
+    Found 26-bit register for signal <val>.
+    Found 26-bit adder for signal <valMux$addsub0000> created at line 53.
+    Summary:
+	inferred  27 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+Unit <clkSub> synthesized.
 
 
 Synthesizing Unit <valsplit>.
@@ -1163,6 +1161,9 @@ Unit <move> synthesized.
 
 Synthesizing Unit <TOP>.
     Related source file is "C:/Users/FONTEILLE/Desktop/ISE/Project1.2/TOP.vhd".
+    Found 1-bit register for signal <refreshLife>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
 Unit <TOP> synthesized.
 
 
@@ -1172,33 +1173,33 @@ HDL Synthesis Report
 Macro Statistics
 # ROMs                                                 : 8
  8x128-bit ROM                                         : 8
-# Adders/Subtractors                                   : 631
+# Adders/Subtractors                                   : 630
  1-bit adder carry out                                 : 84
  10-bit adder                                          : 14
  10-bit subtractor                                     : 6
  11-bit subtractor                                     : 16
  2-bit adder                                           : 84
  2-bit adder carry out                                 : 84
- 26-bit adder                                          : 5
+ 26-bit adder                                          : 4
  3-bit adder                                           : 252
  3-bit adder carry out                                 : 84
  32-bit adder                                          : 2
 # Counters                                             : 2
  10-bit up counter                                     : 1
  32-bit up counter                                     : 1
-# Registers                                            : 193
+# Registers                                            : 192
  1-bit register                                        : 183
  10-bit register                                       : 3
- 26-bit register                                       : 5
+ 26-bit register                                       : 4
  32-bit register                                       : 2
-# Comparators                                          : 227
+# Comparators                                          : 226
  10-bit comparator equal                               : 8
  10-bit comparator greatequal                          : 8
  10-bit comparator greater                             : 2
  10-bit comparator less                                : 2
  11-bit comparator greatequal                          : 16
  11-bit comparator less                                : 16
- 26-bit comparator equal                               : 5
+ 26-bit comparator equal                               : 4
  32-bit comparator greatequal                          : 1
  32-bit comparator greater                             : 1
  4-bit comparator greater                              : 84
@@ -1221,30 +1222,30 @@ Advanced HDL Synthesis Report
 Macro Statistics
 # ROMs                                                 : 8
  8x128-bit ROM                                         : 8
-# Adders/Subtractors                                   : 631
+# Adders/Subtractors                                   : 630
  1-bit adder carry out                                 : 84
  10-bit adder                                          : 14
  10-bit subtractor                                     : 6
  11-bit subtractor                                     : 16
  2-bit adder                                           : 84
  2-bit adder carry out                                 : 84
- 26-bit adder                                          : 5
+ 26-bit adder                                          : 4
  3-bit adder                                           : 252
  3-bit adder carry out                                 : 84
  32-bit adder                                          : 2
 # Counters                                             : 2
  10-bit up counter                                     : 1
  32-bit up counter                                     : 1
-# Registers                                            : 407
- Flip-Flops                                            : 407
-# Comparators                                          : 227
+# Registers                                            : 381
+ Flip-Flops                                            : 381
+# Comparators                                          : 226
  10-bit comparator equal                               : 8
  10-bit comparator greatequal                          : 8
  10-bit comparator greater                             : 2
  10-bit comparator less                                : 2
  11-bit comparator greatequal                          : 16
  11-bit comparator less                                : 16
- 26-bit comparator equal                               : 5
+ 26-bit comparator equal                               : 4
  32-bit comparator greatequal                          : 1
  32-bit comparator greater                             : 1
  4-bit comparator greater                              : 84
@@ -1264,13 +1265,13 @@ Optimizing unit <TOP> ...
 
 Optimizing unit <grid> ...
 
-Optimizing unit <clkSub> ...
-
 Optimizing unit <valInc> ...
 
 Optimizing unit <controlVGA> ...
 
 Optimizing unit <clkDiv> ...
+
+Optimizing unit <clkSub> ...
 
 Optimizing unit <digit> ...
 
@@ -1281,7 +1282,7 @@ Optimizing unit <mover> ...
 Mapping all equations...
 Building and optimizing final netlist ...
 INFO:Xst:2261 - The FF/Latch <CONTROLVGA1/rOut> in Unit <TOP> is equivalent to the following FF/Latch, which will be removed : <CONTROLVGA1/bOut> 
-Found area constraint ratio of 100 (+ 5) on block TOP, actual ratio is 44.
+Found area constraint ratio of 100 (+ 5) on block TOP, actual ratio is 43.
 
 Final Macro Processing ...
 
@@ -1289,8 +1290,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 448
- Flip-Flops                                            : 448
+# Registers                                            : 422
+ Flip-Flops                                            : 422
 
 =========================================================================
 
@@ -1316,41 +1317,41 @@ Optimization Goal                  : Speed
 Keep Hierarchy                     : No
 
 Design Statistics
-# IOs                              : 15
+# IOs                              : 16
 
 Cell Usage :
-# BELS                             : 4798
+# BELS                             : 4656
 #      GND                         : 1
-#      INV                         : 103
-#      LUT1                        : 333
-#      LUT2                        : 542
+#      INV                         : 102
+#      LUT1                        : 312
+#      LUT2                        : 490
 #      LUT2_D                      : 5
 #      LUT2_L                      : 23
-#      LUT3                        : 736
-#      LUT3_D                      : 29
+#      LUT3                        : 747
+#      LUT3_D                      : 30
 #      LUT3_L                      : 23
-#      LUT4                        : 1251
-#      LUT4_D                      : 47
+#      LUT4                        : 1246
+#      LUT4_D                      : 48
 #      LUT4_L                      : 78
-#      MUXCY                       : 775
+#      MUXCY                       : 725
 #      MUXF5                       : 256
 #      MUXF6                       : 16
 #      MUXF7                       : 8
 #      MUXF8                       : 4
 #      VCC                         : 1
-#      XORCY                       : 567
-# FlipFlops/Latches                : 448
+#      XORCY                       : 541
+# FlipFlops/Latches                : 422
 #      FD                          : 19
-#      FDC                         : 210
+#      FDC                         : 184
 #      FDCE                        : 43
 #      FDCP                        : 40
 #      FDE                         : 128
 #      FDP                         : 4
 #      FDR                         : 2
 #      FDRS                        : 2
-# Clock Buffers                    : 2
+# Clock Buffers                    : 3
 #      BUFG                        : 1
-#      BUFGP                       : 1
+#      BUFGP                       : 2
 # IO Buffers                       : 14
 #      IBUF                        : 8
 #      OBUF                        : 6
@@ -1361,12 +1362,12 @@ Device utilization summary:
 
 Selected Device : 3s500efg320-4 
 
- Number of Slices:                     1678  out of   4656    36%  
- Number of Slice Flip Flops:            448  out of   9312     4%  
- Number of 4 input LUTs:               3170  out of   9312    34%  
- Number of IOs:                          15
- Number of bonded IOBs:                  15  out of    232     6%  
- Number of GCLKs:                         2  out of     24     8%  
+ Number of Slices:                     1635  out of   4656    35%  
+ Number of Slice Flip Flops:            422  out of   9312     4%  
+ Number of 4 input LUTs:               3104  out of   9312    33%  
+ Number of IOs:                          16
+ Number of bonded IOBs:                  16  out of    232     6%  
+ Number of GCLKs:                         3  out of     24    12%  
 
 ---------------------------
 Partition Resource Summary:
@@ -1389,7 +1390,8 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk50                              | BUFGP                  | 428   |
+lifeStepButton                     | BUFGP                  | 1     |
+clk50                              | BUFGP                  | 401   |
 CONTROLVGA1/ckdiv21                | BUFG                   | 20    |
 -----------------------------------+------------------------+-------+
 
@@ -1398,7 +1400,7 @@ Asynchronous Control Signals Information:
 -----------------------------------+------------------------+-------+
 Control Signal                     | Buffer(FF name)        | Load  |
 -----------------------------------+------------------------+-------+
-reset                              | IBUF                   | 297   |
+reset                              | IBUF                   | 271   |
 MOVE1/MOVX/pos_0_and0001(XST_GND:G)| NONE(MOVE1/MOVX/pos_0) | 40    |
 -----------------------------------+------------------------+-------+
 
@@ -1418,7 +1420,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk50'
   Clock period: 14.016ns (frequency: 71.347MHz)
-  Total number of paths / destination ports: 40942 / 526
+  Total number of paths / destination ports: 39732 / 499
 -------------------------------------------------------------------------
 Delay:               14.016ns (Levels of Logic = 12)
   Source:            MOVE1/MOVX/pos_1 (FF)
@@ -1485,7 +1487,7 @@ Delay:               8.263ns (Levels of Logic = 14)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk50'
-  Total number of paths / destination ports: 900 / 298
+  Total number of paths / destination ports: 911 / 298
 -------------------------------------------------------------------------
 Offset:              7.363ns (Levels of Logic = 4)
   Source:            lunchLife (PAD)
@@ -1550,8 +1552,8 @@ Offset:              4.310ns (Levels of Logic = 1)
 =========================================================================
 
 
-Total REAL time to Xst completion: 148.00 secs
-Total CPU time to Xst completion: 147.92 secs
+Total REAL time to Xst completion: 139.00 secs
+Total CPU time to Xst completion: 138.92 secs
  
 --> 
 

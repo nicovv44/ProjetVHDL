@@ -44,14 +44,14 @@ Setup/Hold to clock clk50
             |Max Setup to|Max Hold to |                  | Clock  |
 Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------------+--------+
-drawEnable  |    7.767(R)|   -1.264(R)|clk50_BUFGP       |   0.000|
-freeMove    |    6.420(R)|   -0.533(R)|clk50_BUFGP       |   0.000|
-lunchLife   |    6.874(R)|   -0.517(R)|clk50_BUFGP       |   0.000|
-posXM       |    4.972(R)|   -0.681(R)|clk50_BUFGP       |   0.000|
-posXP       |    4.596(R)|   -0.546(R)|clk50_BUFGP       |   0.000|
-posYM       |    6.138(R)|   -1.812(R)|clk50_BUFGP       |   0.000|
-posYP       |    5.041(R)|   -0.052(R)|clk50_BUFGP       |   0.000|
-reset       |    6.101(R)|   -0.009(R)|clk50_BUFGP       |   0.000|
+drawEnable  |    8.498(R)|   -1.787(R)|clk50_BUFGP       |   0.000|
+freeMove    |    7.579(R)|   -0.309(R)|clk50_BUFGP       |   0.000|
+lunchLife   |    8.629(R)|   -0.530(R)|clk50_BUFGP       |   0.000|
+posXM       |    5.768(R)|   -1.337(R)|clk50_BUFGP       |   0.000|
+posXP       |    5.304(R)|   -1.462(R)|clk50_BUFGP       |   0.000|
+posYM       |    6.468(R)|   -1.883(R)|clk50_BUFGP       |   0.000|
+posYP       |    5.423(R)|   -0.508(R)|clk50_BUFGP       |   0.000|
+reset       |    7.260(R)|    0.206(R)|clk50_BUFGP       |   0.000|
 ------------+------------+------------+------------------+--------+
 
 Clock clk50 to Pad
@@ -59,9 +59,9 @@ Clock clk50 to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-blue        |    8.546(R)|clk50_BUFGP       |   0.000|
-green       |    8.447(R)|clk50_BUFGP       |   0.000|
-red         |    8.546(R)|clk50_BUFGP       |   0.000|
+blue        |    8.301(R)|clk50_BUFGP       |   0.000|
+green       |    8.561(R)|clk50_BUFGP       |   0.000|
+red         |    9.076(R)|clk50_BUFGP       |   0.000|
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock clk50
@@ -69,11 +69,11 @@ Clock to Setup on destination clock clk50
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk50          |   13.137|         |         |         |
+clk50          |   13.510|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Tue Mar 13 11:25:04 2018 
+Analysis completed Wed Mar 14 15:39:45 2018 
 --------------------------------------------------------------------------------
 
 Trace Settings:

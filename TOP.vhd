@@ -40,6 +40,7 @@ entity TOP is
 			  freeMove : in STD_LOGIC;
 			  lunchLife : in STD_LOGIC;
 			  drawEnable : in STD_LOGIC;
+			  lifeStepButton : in STD_LOGIC;
            red : out  STD_LOGIC;
            green : out  STD_LOGIC;
            blue : out  STD_LOGIC;
@@ -176,6 +177,9 @@ begin
 		redWire <=     redHex32 or   redShapes or   redGrid;
 		greenWire <= greenHex32 or greenShapes or greenGrid;
 		blueWire <=   blueHex32 or  blueShapes or  blueGrid;
+		--refreshLife
+		refreshLife <= '0' when reset='1'
+						else '1' when rising_edge(lifeStepButton);
 		--instances
 		GRID1 : grid port map(
 									--in
@@ -197,14 +201,14 @@ begin
 									greenOut => greenGrid,
 									blueOut => blueGrid
 									);
-		CLKS1 : clkSub port map(
-								--in
-								clk => clk50,
-								reset => reset,
-								subVal => "10111110101111000010000000",-- 50,000,000 on 26 bits
-								--inout
-								clks => refreshLife
-								);
+--		CLKS1 : clkSub port map(
+--								--in
+--								clk => clk50,
+--								reset => reset,
+--								subVal => "10111110101111000010000000",-- 50,000,000 on 26 bits
+--								--inout
+--								clks => refreshLife
+--								);
 		SHAPES1 : shapes port map(
 									--in
 									clk => clk50,
@@ -214,7 +218,7 @@ begin
 									beamValid => beamValidWire,
 									posX => posXWire2,
 									posY => posYWire2,
-									--out
+									--out²
 									redOut => redShapes,
 									greenOut => greenShapes,
 									blueOut => blueShapes

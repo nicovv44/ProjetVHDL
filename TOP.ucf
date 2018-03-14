@@ -12,6 +12,7 @@ NET "red" LOC = H14;
 NET "reset" LOC = L13;
 NET "vsync" LOC = F14;
 NET "lunchLife" LOC = H18;
+NET "lifeStepButton" LOC = V16 | CLOCK_DEDICATED_ROUTE=TRUE;
 NET "drawEnable" LOC = N17;
 NET "freeMove" LOC = L14;
 
@@ -24,5 +25,6 @@ NET "posYM" PULLDOWN;
 NET "posYP" PULLDOWN;
 NET "reset" PULLDOWN;
 NET "lunchLife" PULLDOWN;
+NET "lifeStepButton" PULLDOWN;
 
 
