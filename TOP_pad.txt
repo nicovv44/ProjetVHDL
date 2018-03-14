@@ -1,7 +1,7 @@
 Release 14.7 - par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Wed Mar 14 15:39:38 2018
+Wed Mar 14 16:46:09 2018
 
 
 INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:
@@ -120,7 +120,7 @@ Pinout by Pin Number:
 |F8        |              |DIFFS    |IO_L17N_0                |UNUSED   |           |0             |          |         |           |         |         |          |           |                |
 |F9        |              |DIFFS    |IO_L15N_0                |UNUSED   |           |0             |          |         |           |         |         |          |           |                |
 |F10       |              |DIFFMI   |IP_L10P_0                |UNUSED   |           |0             |          |         |           |         |         |          |           |                |
-|F11       |blank         |IOB      |IO_L08N_0                |OUTPUT   |LVCMOS25*  |0             |12        |SLOW     |NONE**     |         |         |UNLOCATED |NO         |NONE            |
+|F11       |              |DIFFS    |IO_L08N_0                |UNUSED   |           |0             |          |         |           |         |         |          |           |                |
 |F12       |              |DIFFM    |IO_L06P_0                |UNUSED   |           |0             |          |         |           |         |         |          |           |                |
 |F13       |              |         |VCCINT                   |         |           |              |          |         |           |         |1.2      |          |           |                |
 |F14       |vsync         |IOB      |IO_L21N_1                |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |NONE**     |         |         |LOCATED   |NO         |NONE            |
@@ -141,7 +141,7 @@ Pinout by Pin Number:
 |G11       |              |         |VCCO_0                   |         |           |0             |          |         |           |         |2.50     |          |           |                |
 |G12       |              |         |GND                      |         |           |              |          |         |           |         |         |          |           |                |
 |G13       |              |DIFFS    |IO_L20N_1                |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
-|G14       |              |DIFFM    |IO_L20P_1                |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
+|G14       |blank         |IOB      |IO_L20P_1                |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |NONE**     |         |         |UNLOCATED |NO         |NONE            |
 |G15       |blue          |IOB      |IO_L18P_1                |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |NONE**     |         |         |LOCATED   |NO         |NONE            |
 |G16       |              |DIFFS    |IO_L18N_1                |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
 |G17       |              |         |VCCAUX                   |         |           |              |          |         |           |         |2.5      |          |           |                |
@@ -209,7 +209,7 @@ Pinout by Pin Number:
 |L11       |              |         |GND                      |         |           |              |          |         |           |         |         |          |           |                |
 |L12       |              |         |VCCO_1                   |         |           |1             |          |         |           |         |2.50     |          |           |                |
 |L13       |reset         |IBUF     |IP                       |INPUT    |LVCMOS25*  |1             |          |         |PULLDOWN   |NONE     |         |LOCATED   |NO         |NONE            |
-|L14       |freeMove      |IBUF     |IP                       |INPUT    |LVCMOS25*  |1             |          |         |PULLDOWN   |NONE     |         |LOCATED   |NO         |NONE            |
+|L14       |lifeStepButton|IBUF     |IP                       |INPUT    |LVCMOS25*  |1             |          |         |PULLDOWN   |NONE     |         |LOCATED   |NO         |NONE            |
 |L15       |              |DIFFS    |IO_L09N_1/A11            |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
 |L16       |              |DIFFM    |IO_L09P_1/A12            |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
 |L17       |              |DIFFS    |IO_L10N_1/VREF_1         |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
@@ -337,7 +337,7 @@ Pinout by Pin Number:
 |V13       |              |DIFFS    |IO_L19N_2/VREF_2         |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |V14       |              |DIFFMI   |IP_L23P_2                |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |V15       |              |DIFFM    |IO_L25P_2/VS2/A19        |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
-|V16       |lifeStepButton|IBUF     |IP                       |INPUT    |LVCMOS25*  |2             |          |         |PULLDOWN   |NONE     |         |LOCATED   |NO         |NONE            |
+|V16       |freeMove      |IBUF     |IP                       |INPUT    |LVCMOS25*  |2             |          |         |PULLDOWN   |NONE     |         |LOCATED   |NO         |NONE            |
 |V17       |              |         |DONE                     |         |           |              |          |         |           |         |         |          |           |                |
 |V18       |              |         |GND                      |         |           |              |          |         |           |         |         |          |           |                |
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+

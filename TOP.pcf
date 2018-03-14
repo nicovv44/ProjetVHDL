@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Wed Mar 14 15:36:44 2018
+// Written by: Map P.20131013 on Wed Mar 14 16:42:04 2018
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -14,12 +14,12 @@ COMP "posXP" LOCATE = SITE "H13" LEVEL 1;
 COMP "posYP" LOCATE = SITE "K17" LEVEL 1;
 COMP "reset" LOCATE = SITE "L13" LEVEL 1;
 COMP "vsync" LOCATE = SITE "F14" LEVEL 1;
-COMP "lifeStepButton" LOCATE = SITE "V16" LEVEL 1;
+COMP "lifeStepButton" LOCATE = SITE "L14" LEVEL 1;
 PIN lifeStepButton_pin<0> = BEL "lifeStepButton" PINNAME PAD;
 PIN "lifeStepButton_pin<0>" CLOCK_DEDICATED_ROUTE;
 COMP "lunchLife" LOCATE = SITE "H18" LEVEL 1;
 COMP "drawEnable" LOCATE = SITE "N17" LEVEL 1;
-COMP "freeMove" LOCATE = SITE "L14" LEVEL 1;
+COMP "freeMove" LOCATE = SITE "V16" LEVEL 1;
 NET "clk50_BUFGP/IBUFG" BEL "clk50_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
 NET "lifeStepButton_BUFGP/IBUFG" BEL "lifeStepButton_BUFGP/BUFG.GCLKMUX"
         USELOCALCONNECT;

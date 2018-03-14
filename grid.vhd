@@ -58,7 +58,7 @@ signal grid1 : gridArray := (others => (others => '0'));
 signal sig : STD_LOGIC;
 
 begin
-	process (clk, reset, refreshLife)
+	process (clk)
 	variable nbVoisin : integer := 0;--nombre de voisin de la case centrale
 	begin
 		IF (clk='1') AND (clk'EVENT) THEN -- TRUE sur un front montant de clk
@@ -77,25 +77,29 @@ begin
 			else--code pour modifier grid1 selon le jeu de la vie
 				for X in 0 to 13 loop
 					for Y in 0 to 5 loop
-						--on compte le nombre de voisin
-						nbVoisin := 0;
-						for X1 in 0 to 2 loop
-							for Y1 in 0 to 2 loop
-								if (grid1(Y+Y1)(X+X1)='1' and not (X1 = 1 and Y1 = 1)) then 
-									nbVoisin := nbVoisin +1;
+					      if (reset='1') then
+							   grid1(Y)(X) <= '0';
+							elsif refreshLife = '1' then  -- on ne reste pas
+								--on compte le nombre de voisin
+								nbVoisin := 0;
+								for X1 in 0 to 2 loop
+									for Y1 in 0 to 2 loop
+										if (grid1(Y+Y1)(X+X1)='1' and not (X1 = 1 and Y1 = 1)) then 
+											nbVoisin := nbVoisin +1;
+										end if;
+									end loop;
+								end loop;
+								--on modifie la case centrale (Y+1)(X+1)
+								if (refreshLife='1' and         reset='1'                      ) then
+									grid1(Y+1)(X+1) <= '0';
+								elsif (refreshLife='1' and      nbVoisin = 3                   ) then
+									grid1(Y+1)(X+1) <= '1';
+								elsif (refreshLife='1' and      nbVoisin = 2                   ) then
+									grid1(Y+1)(X+1) <= grid1(Y+1)(X+1);
+								elsif (refreshLife='1' and     (nbVoisin < 2 or 3 < nbVoisin)  ) then
+									grid1(Y+1)(X+1) <= '0';
 								end if;
-							end loop;
-						end loop;
-						--on modifie la case centrale (Y+1)(X+1)
-						if (refreshLife='1' and         reset='1'                      ) then
-							grid1(Y+1)(X+1) <= '0';
-						elsif (refreshLife='1' and      nbVoisin = 3                   ) then
-							grid1(Y+1)(X+1) <= '1';
-						elsif (refreshLife='1' and      nbVoisin = 2                   ) then
-							grid1(Y+1)(X+1) <= grid1(Y+1)(X+1);
-						elsif (refreshLife='1' and     (nbVoisin < 2 or 3 < nbVoisin)  ) then
-							grid1(Y+1)(X+1) <= '0';
-						end if;
+						end if; -- end check for reset
 					end loop;
 				end loop;
 			END IF;
