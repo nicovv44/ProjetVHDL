@@ -1,5 +1,6 @@
 vhdl work "clkSub.vhd"
 vhdl work "valsplit.vhd"
+vhdl work "VALIDATE.vhd"
 vhdl work "rectangle.vhd"
 vhdl work "posXadd.vhd"
 vhdl work "mover.vhd"

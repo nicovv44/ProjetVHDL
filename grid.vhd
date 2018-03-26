@@ -62,16 +62,27 @@ component CellCount is
            c8 : in  STD_LOGIC;
            outLife : out  STD_LOGIC);
 end component;
+component validate is
+	Port ( reset : in  STD_LOGIC;
+			  refreshLife: in std_logic;
+           life : in  STD_LOGIC;
+           drawEnable : in  STD_LOGIC;
+			  posX : in  STD_LOGIC_VECTOR (9 downto 0);
+           posY : in  STD_LOGIC_VECTOR (9 downto 0);
+			  X : in  STD_LOGIC_VECTOR (9 downto 0);
+			  Y : in  STD_LOGIC_VECTOR (9 downto 0);
+			  lunchLife : in STD_LOGIC;
+           result : out  STD_LOGIC);
+end component;
 
 --types
 Type gridArray is array (0 to 7) of std_logic_vector (0 to 15);--(about Y) then (about X)
---Type gridArrayVoisin is array (0 to 7) of gridArray;
 
 --signals
 signal grid1 : gridArray := (others => (others => '0'));
---signal grid2 : gridArrayVoisin := (others => (others => (others => '0')));
-signal sig : STD_LOGIC;
+signal sig : STD_LOGIC;--signal: display grid block or not
 signal outLifeWire : STD_LOGIC := '0';
+signal outLifeWire2 : STD_LOGIC := '0';
 
 begin
 --	process (clk)
@@ -108,20 +119,40 @@ begin
 														c8 => grid1(y+1)(x+1),
 														outLife => outLifeWire
 														);
-				VALIDATE : Validate PORT MAP(reset => reset, 
+				VALIDATE : validate PORT MAP(reset => reset, 
 														refreshLife => refreshLife,
-														outlifewire => outLifeWire,
-														drawenabled =>drawEnable,
-														posX => posX(x),
-														posy => poxY(y),
-														launchlife => lunchLife,
+														life => outLifeWire,
+														drawEnable =>drawEnable,
+														posX => posX,
+														posY => posY,
+														X => std_logic_vector(to_unsigned(x*64, 10)),--on 10bits
+														Y => std_logic_vector(to_unsigned(y*64, 10)),--on 10bits
+														lunchLife => lunchLife,
 														result => grid1(y)(x)
 														);
-				--grid1(y)(x) <= '0' when reset='1' else
-					--			outLifeWire when rising_edge(refreshLife);
 			END GENERATE INNERLOOP1;
 			INNERLOOP2: IF (x = 2 and y = 1) GENERATE--case1
-				--
+				CELLCOUNT: CellCount PORT MAP(c1 => grid1(y-1)(x-1),
+														c2 => grid1(y-1)(x  ),
+														c3 => grid1(y-1)(x+1),
+														c4 => grid1(y  )(x-1),
+														c5 => grid1(y  )(x+1),
+														c6 => grid1(y+1)(x-1),
+														c7 => grid1(y+1)(x  ),
+														c8 => grid1(y+1)(x+1),
+														outLife => outLifeWire2
+														);
+				VALIDATE : validate PORT MAP(reset => reset, 
+														refreshLife => refreshLife,
+														life => outLifeWire2,
+														drawEnable =>drawEnable,
+														posX => posX,
+														posY => posY,
+														X => std_logic_vector(to_unsigned(x*64, 10)),--on 10bits
+														Y => std_logic_vector(to_unsigned(y*64, 10)),--on 10bits
+														lunchLife => lunchLife,
+														result => grid1(y)(x)
+														);
 			END GENERATE INNERLOOP2;
 		END GENERATE OUTERLOOP2;
 	END GENERATE OUTERLOOP;

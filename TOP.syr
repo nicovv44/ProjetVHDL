@@ -120,6 +120,8 @@ Compiling vhdl file "C:/Users/FONTEILLE/Desktop/ISE/Project1.2/rectangle.vhd" in
 Architecture behavioral of Entity rectangle is up to date.
 Compiling vhdl file "C:/Users/FONTEILLE/Desktop/ISE/Project1.2/CellCount.vhd" in Library work.
 Architecture behavioral of Entity cellcount is up to date.
+Compiling vhdl file "C:/Users/FONTEILLE/Desktop/ISE/Project1.2/VALIDATE.vhd" in Library work.
+Architecture behavioral of Entity validate is up to date.
 Compiling vhdl file "C:/Users/FONTEILLE/Desktop/ISE/Project1.2/grid.vhd" in Library work.
 Entity <grid> compiled.
 Entity <grid> (Architecture <behavioral>) compiled.
@@ -155,6 +157,8 @@ Analyzing hierarchy for entity <controlVGA> in library <work> (architecture <rtl
 
 Analyzing hierarchy for entity <CellCount> in library <work> (architecture <behavioral>).
 
+Analyzing hierarchy for entity <validate> in library <work> (architecture <behavioral>).
+
 Analyzing hierarchy for entity <clkDiv> in library <work> (architecture <behavioral>).
 
 Analyzing hierarchy for entity <rectangle> in library <work> (architecture <behavioral>).
@@ -181,6 +185,9 @@ Entity <grid> analyzed. Unit <grid> generated.
 
 Analyzing Entity <CellCount> in library <work> (Architecture <behavioral>).
 Entity <CellCount> analyzed. Unit <CellCount> generated.
+
+Analyzing Entity <validate> in library <work> (Architecture <behavioral>).
+Entity <validate> analyzed. Unit <validate> generated.
 
 Analyzing Entity <shapes> in library <work> (Architecture <behavioral>).
 Entity <shapes> analyzed. Unit <shapes> generated.
@@ -274,6 +281,23 @@ Synthesizing Unit <CellCount>.
 Unit <CellCount> synthesized.
 
 
+Synthesizing Unit <validate>.
+    Related source file is "C:/Users/FONTEILLE/Desktop/ISE/Project1.2/VALIDATE.vhd".
+WARNING:Xst:647 - Input <X<5:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Y<9>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Y<5:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <posX<5:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <posY<9>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <posY<5:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <result>.
+    Found 4-bit comparator equal for signal <result$cmp_eq0000> created at line 48.
+    Found 3-bit comparator equal for signal <result$cmp_eq0001> created at line 48.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+Unit <validate> synthesized.
+
+
 Synthesizing Unit <clkDiv>.
     Related source file is "C:/Users/FONTEILLE/Desktop/ISE/Project1.2/clkDiv.vhd".
     Found 1-bit register for signal <clkd>.
@@ -365,16 +389,17 @@ Unit <digit> synthesized.
 
 Synthesizing Unit <grid>.
     Related source file is "C:/Users/FONTEILLE/Desktop/ISE/Project1.2/grid.vhd".
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <beamX<5:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <beamY<9>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <beamY<5:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <posX<5:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <posY<9>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <posY<5:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Found 1-bit 16-to-1 multiplexer for signal <$varindex0000> created at line 120.
-    Found 16-bit 8-to-1 multiplexer for signal <sig$varindex0000> created at line 120.
+WARNING:Xst:653 - Signal <grid1<0>> is used but never assigned. This sourceless signal will be automatically connected to value 0000000000000000.
+WARNING:Xst:653 - Signal <grid1<1><0>> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:653 - Signal <grid1<1><3:15>> is used but never assigned. This sourceless signal will be automatically connected to value 0000000000000.
+WARNING:Xst:1781 - Signal <grid1<2:7>> is used but never assigned. Tied to default value.
+    Found 1-bit 16-to-1 multiplexer for signal <$varindex0000> created at line 160.
+    Found 16-bit 8-to-1 multiplexer for signal <sig$varindex0000> created at line 160.
     Summary:
-	inferred 129 D-type flip-flop(s).
 	inferred  17 Multiplexer(s).
 Unit <grid> synthesized.
 
@@ -436,12 +461,12 @@ Macro Statistics
 # Counters                                             : 2
  10-bit up counter                                     : 1
  32-bit up counter                                     : 1
-# Registers                                            : 193
- 1-bit register                                        : 184
+# Registers                                            : 66
+ 1-bit register                                        : 57
  10-bit register                                       : 3
  26-bit register                                       : 4
  32-bit register                                       : 2
-# Comparators                                          : 58
+# Comparators                                          : 62
  10-bit comparator equal                               : 8
  10-bit comparator greatequal                          : 8
  10-bit comparator greater                             : 2
@@ -449,8 +474,10 @@ Macro Statistics
  11-bit comparator greatequal                          : 16
  11-bit comparator less                                : 16
  26-bit comparator equal                               : 4
+ 3-bit comparator equal                                : 2
  32-bit comparator greatequal                          : 1
  32-bit comparator greater                             : 1
+ 4-bit comparator equal                                : 2
 # Multiplexers                                         : 130
  1-bit 16-to-1 multiplexer                             : 1
  1-bit 8-to-1 multiplexer                              : 128
@@ -478,9 +505,9 @@ Macro Statistics
 # Counters                                             : 2
  10-bit up counter                                     : 1
  32-bit up counter                                     : 1
-# Registers                                            : 382
- Flip-Flops                                            : 382
-# Comparators                                          : 58
+# Registers                                            : 255
+ Flip-Flops                                            : 255
+# Comparators                                          : 62
  10-bit comparator equal                               : 8
  10-bit comparator greatequal                          : 8
  10-bit comparator greater                             : 2
@@ -488,11 +515,14 @@ Macro Statistics
  11-bit comparator greatequal                          : 16
  11-bit comparator less                                : 16
  26-bit comparator equal                               : 4
+ 3-bit comparator equal                                : 2
  32-bit comparator greatequal                          : 1
  32-bit comparator greater                             : 1
-# Multiplexers                                         : 145
+ 4-bit comparator equal                                : 2
+# Multiplexers                                         : 130
  1-bit 16-to-1 multiplexer                             : 1
- 1-bit 8-to-1 multiplexer                              : 144
+ 1-bit 8-to-1 multiplexer                              : 128
+ 16-bit 8-to-1 multiplexer                             : 1
 
 =========================================================================
 
@@ -500,20 +530,324 @@ Macro Statistics
 *                         Low Level Synthesis                           *
 =========================================================================
 
-ERROR:Xst:528 - Multi-source in Unit <grid> on signal <grid1<1><1>>; this signal is connected to multiple drivers.
-Drivers are: 
-   Output signal of FDE instance <GRID1/grid1<1>_1_ren>
-   Output signal of FDC instance <GRID1/grid1<1>_1>
+Optimizing unit <TOP> ...
+
+Optimizing unit <valInc> ...
+
+Optimizing unit <controlVGA> ...
+
+Optimizing unit <clkDiv> ...
+
+Optimizing unit <clkSub> ...
+
+Optimizing unit <digit> ...
+
+Optimizing unit <Hex32> ...
+
+Optimizing unit <mover> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+INFO:Xst:2261 - The FF/Latch <CONTROLVGA1/rOut> in Unit <TOP> is equivalent to the following FF/Latch, which will be removed : <CONTROLVGA1/bOut> 
+Found area constraint ratio of 100 (+ 5) on block TOP, actual ratio is 23.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 296
+ Flip-Flops                                            : 296
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : TOP.ngr
+Top Level Output File Name         : TOP
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 16
+
+Cell Usage :
+# BELS                             : 3056
+#      GND                         : 1
+#      INV                         : 101
+#      LUT1                        : 312
+#      LUT2                        : 438
+#      LUT2_D                      : 14
+#      LUT2_L                      : 21
+#      LUT3                        : 160
+#      LUT3_D                      : 7
+#      LUT3_L                      : 8
+#      LUT4                        : 522
+#      LUT4_D                      : 13
+#      LUT4_L                      : 53
+#      MUXCY                       : 725
+#      MUXF5                       : 139
+#      VCC                         : 1
+#      XORCY                       : 541
+# FlipFlops/Latches                : 296
+#      FD                          : 19
+#      FDC                         : 184
+#      FDCE                        : 43
+#      FDCP                        : 42
+#      FDP                         : 4
+#      FDR                         : 2
+#      FDRS                        : 2
+# Clock Buffers                    : 3
+#      BUFG                        : 1
+#      BUFGP                       : 2
+# IO Buffers                       : 14
+#      IBUF                        : 8
+#      OBUF                        : 6
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                      877  out of   4656    18%  
+ Number of Slice Flip Flops:            296  out of   9312     3%  
+ Number of 4 input LUTs:               1649  out of   9312    17%  
+ Number of IOs:                          16
+ Number of bonded IOBs:                  16  out of    232     6%  
+ Number of GCLKs:                         3  out of     24    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
 
 
-Total REAL time to Xst completion: 9.00 secs
-Total CPU time to Xst completion: 9.17 secs
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------------------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                                            | Load  |
+-----------------------------------+------------------------------------------------------------------+-------+
+lifeStepButton                     | BUFGP                                                            | 1     |
+refreshLife                        | NONE(GRID1/OUTERLOOP[1].OUTERLOOP2[1].INNERLOOP1.VALIDATE/result)| 2     |
+clk50                              | BUFGP                                                            | 273   |
+CONTROLVGA1/ckdiv21                | BUFG                                                             | 20    |
+-----------------------------------+------------------------------------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------+-------+
+Control Signal                                                                                                                             | Buffer(FF name)                                                  | Load  |
+-------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------+-------+
+reset                                                                                                                                      | IBUF                                                             | 273   |
+MOVE1/MOVX/pos_0_and0001(XST_GND:G)                                                                                                        | NONE(MOVE1/MOVX/pos_0)                                           | 40    |
+GRID1/OUTERLOOP[1].OUTERLOOP2[1].INNERLOOP1.VALIDATE/result_and0000(GRID1/OUTERLOOP[1].OUTERLOOP2[1].INNERLOOP1.VALIDATE/result_and00002:O)| NONE(GRID1/OUTERLOOP[1].OUTERLOOP2[1].INNERLOOP1.VALIDATE/result)| 1     |
+GRID1/OUTERLOOP[2].OUTERLOOP2[1].INNERLOOP2.VALIDATE/result_and0000(GRID1/OUTERLOOP[2].OUTERLOOP2[1].INNERLOOP2.VALIDATE/result_and00001:O)| NONE(GRID1/OUTERLOOP[2].OUTERLOOP2[1].INNERLOOP2.VALIDATE/result)| 1     |
+-------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 13.972ns (Maximum Frequency: 71.572MHz)
+   Minimum input arrival time before clock: 6.525ns
+   Maximum output required time after clock: 9.281ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'refreshLife'
+  Clock period: 1.346ns (frequency: 742.942MHz)
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Delay:               1.346ns (Levels of Logic = 0)
+  Source:            GRID1/OUTERLOOP[2].OUTERLOOP2[1].INNERLOOP2.VALIDATE/result (FF)
+  Destination:       GRID1/OUTERLOOP[1].OUTERLOOP2[1].INNERLOOP1.VALIDATE/result (FF)
+  Source Clock:      refreshLife rising
+  Destination Clock: refreshLife rising
+
+  Data Path: GRID1/OUTERLOOP[2].OUTERLOOP2[1].INNERLOOP2.VALIDATE/result to GRID1/OUTERLOOP[1].OUTERLOOP2[1].INNERLOOP1.VALIDATE/result
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCP:C->Q             2   0.591   0.447  GRID1/OUTERLOOP[2].OUTERLOOP2[1].INNERLOOP2.VALIDATE/result (GRID1/OUTERLOOP[2].OUTERLOOP2[1].INNERLOOP2.VALIDATE/result)
+     FDCP:D                    0.308          GRID1/OUTERLOOP[1].OUTERLOOP2[1].INNERLOOP1.VALIDATE/result
+    ----------------------------------------
+    Total                      1.346ns (0.899ns logic, 0.447ns route)
+                                       (66.8% logic, 33.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk50'
+  Clock period: 13.972ns (frequency: 71.572MHz)
+  Total number of paths / destination ports: 37798 / 287
+-------------------------------------------------------------------------
+Delay:               13.972ns (Levels of Logic = 12)
+  Source:            MOVE1/MOVX/pos_1 (FF)
+  Destination:       CONTROLVGA1/rOut (FF)
+  Source Clock:      clk50 rising
+  Destination Clock: clk50 rising
+
+  Data Path: MOVE1/MOVX/pos_1 to CONTROLVGA1/rOut
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCP:C->Q            13   0.591   0.983  MOVE1/MOVX/pos_1 (MOVE1/MOVX/pos_1)
+     INV:I->O              1   0.704   0.000  HEX321/PXA1/Madd_posX4_lut<1>_INV_0 (HEX321/PXA1/Madd_posX4_lut<1>)
+     XORCY:LI->O           1   0.527   0.499  HEX321/PXA1/Madd_posX4_xor<1> (HEX321/posX4Wire<1>)
+     LUT2:I1->O            1   0.704   0.000  HEX321/D4/Msub_newPosX_lut<1> (HEX321/D4/Msub_newPosX_lut<1>)
+     XORCY:LI->O          22   0.527   1.164  HEX321/D4/Msub_newPosX_xor<1> (HEX321/D4/newPosX<1>)
+     MUXF5:S->O            1   0.739   0.499  HEX321/D4/Mmux_romSig_mux0000_5_f5 (HEX321/D4/Mmux_romSig_mux0000_5_f5)
+     LUT3:I1->O            1   0.704   0.000  HEX321/D4/romSig_or0000664_F (N354)
+     MUXF5:I0->O           1   0.321   0.455  HEX321/D4/romSig_or0000664 (HEX321/D4/romSig_or0000664)
+     LUT4:I2->O            1   0.704   0.424  HEX321/D4/romSig_or0000699 (HEX321/D4/romSig_or0000699)
+     LUT4:I3->O            1   0.704   0.424  HEX321/D4/romSig_or0000792_SW0 (N72)
+     LUT4_D:I3->O          1   0.704   0.455  HEX321/D4/romSig_or0000792 (HEX321/D4/romSig)
+     LUT4:I2->O            1   0.704   0.424  redWire151_SW0_SW0_SW0_SW0 (N189)
+     LUT4:I3->O            1   0.704   0.000  redWire151 (blueWire15)
+     FDRS:D                    0.308          CONTROLVGA1/rOut
+    ----------------------------------------
+    Total                     13.972ns (8.645ns logic, 5.327ns route)
+                                       (61.9% logic, 38.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CONTROLVGA1/ckdiv21'
+  Clock period: 8.263ns (frequency: 121.021MHz)
+  Total number of paths / destination ports: 940 / 30
+-------------------------------------------------------------------------
+Delay:               8.263ns (Levels of Logic = 14)
+  Source:            CONTROLVGA1/cptv_2 (FF)
+  Destination:       CONTROLVGA1/cptv_9 (FF)
+  Source Clock:      CONTROLVGA1/ckdiv21 rising
+  Destination Clock: CONTROLVGA1/ckdiv21 rising
+
+  Data Path: CONTROLVGA1/cptv_2 to CONTROLVGA1/cptv_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            10   0.591   0.917  CONTROLVGA1/cptv_2 (CONTROLVGA1/cptv_2)
+     LUT4:I2->O            1   0.704   0.424  CONTROLVGA1/cptvsup52528 (CONTROLVGA1/cptvsup52528)
+     LUT4:I3->O            3   0.704   0.535  CONTROLVGA1/cptvsup525224_SW0 (N416)
+     LUT4:I3->O            8   0.704   0.932  CONTROLVGA1/cptvsup525224 (CONTROLVGA1/cptvsup525)
+     LUT3:I0->O            1   0.704   0.000  CONTROLVGA1/Mcount_cptv_lut<0> (CONTROLVGA1/Mcount_cptv_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  CONTROLVGA1/Mcount_cptv_cy<0> (CONTROLVGA1/Mcount_cptv_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  CONTROLVGA1/Mcount_cptv_cy<1> (CONTROLVGA1/Mcount_cptv_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  CONTROLVGA1/Mcount_cptv_cy<2> (CONTROLVGA1/Mcount_cptv_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  CONTROLVGA1/Mcount_cptv_cy<3> (CONTROLVGA1/Mcount_cptv_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  CONTROLVGA1/Mcount_cptv_cy<4> (CONTROLVGA1/Mcount_cptv_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  CONTROLVGA1/Mcount_cptv_cy<5> (CONTROLVGA1/Mcount_cptv_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  CONTROLVGA1/Mcount_cptv_cy<6> (CONTROLVGA1/Mcount_cptv_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  CONTROLVGA1/Mcount_cptv_cy<7> (CONTROLVGA1/Mcount_cptv_cy<7>)
+     MUXCY:CI->O           0   0.059   0.000  CONTROLVGA1/Mcount_cptv_cy<8> (CONTROLVGA1/Mcount_cptv_cy<8>)
+     XORCY:CI->O           1   0.804   0.000  CONTROLVGA1/Mcount_cptv_xor<9> (CONTROLVGA1/Mcount_cptv9)
+     FDCE:D                    0.308          CONTROLVGA1/cptv_9
+    ----------------------------------------
+    Total                      8.263ns (5.455ns logic, 2.808ns route)
+                                       (66.0% logic, 34.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk50'
+  Total number of paths / destination ports: 178 / 42
+-------------------------------------------------------------------------
+Offset:              6.525ns (Levels of Logic = 4)
+  Source:            freeMove (PAD)
+  Destination:       MOVE2/MOVX/pos_1 (FF)
+  Destination Clock: clk50 rising
+
+  Data Path: freeMove to MOVE2/MOVX/pos_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            32   1.218   1.437  freeMove_IBUF (MOVE1/posXM2)
+     LUT2:I0->O            9   0.704   0.855  MOVE2/posYP21 (MOVE2/posYP2)
+     LUT4:I2->O            1   0.704   0.595  MOVE2/MOVY/pos_1_mux000013 (MOVE2/MOVY/pos_1_mux000013)
+     LUT2:I0->O            1   0.704   0.000  MOVE2/MOVY/pos_1_mux000032 (MOVE2/MOVY/pos_1_mux0000)
+     FDCP:D                    0.308          MOVE2/MOVY/pos_1
+    ----------------------------------------
+    Total                      6.525ns (3.638ns logic, 2.887ns route)
+                                       (55.8% logic, 44.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CONTROLVGA1/ckdiv21'
+  Total number of paths / destination ports: 43 / 3
+-------------------------------------------------------------------------
+Offset:              9.281ns (Levels of Logic = 5)
+  Source:            CONTROLVGA1/cpth_2 (FF)
+  Destination:       blank (PAD)
+  Source Clock:      CONTROLVGA1/ckdiv21 rising
+
+  Data Path: CONTROLVGA1/cpth_2 to blank
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              5   0.591   0.808  CONTROLVGA1/cpth_2 (CONTROLVGA1/cpth_2)
+     LUT3:I0->O            1   0.704   0.424  CONTROLVGA1/cpthsup13811_SW0 (N9)
+     LUT4:I3->O            1   0.704   0.424  CONTROLVGA1/cpthsup13811 (CONTROLVGA1/N6)
+     LUT4:I3->O            2   0.704   0.526  CONTROLVGA1/blank_or0000101 (CONTROLVGA1/blank_or0000101)
+     LUT2:I1->O            1   0.704   0.420  CONTROLVGA1/blank1 (blank_OBUF)
+     OBUF:I->O                 3.272          blank_OBUF (blank)
+    ----------------------------------------
+    Total                      9.281ns (6.679ns logic, 2.602ns route)
+                                       (72.0% logic, 28.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk50'
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Offset:              4.310ns (Levels of Logic = 1)
+  Source:            CONTROLVGA1/rOut (FF)
+  Destination:       blue (PAD)
+  Source Clock:      clk50 rising
+
+  Data Path: CONTROLVGA1/rOut to blue
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRS:C->Q             2   0.591   0.447  CONTROLVGA1/rOut (CONTROLVGA1/rOut)
+     OBUF:I->O                 3.272          blue_OBUF (blue)
+    ----------------------------------------
+    Total                      4.310ns (3.863ns logic, 0.447ns route)
+                                       (89.6% logic, 10.4% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 18.00 secs
+Total CPU time to Xst completion: 18.75 secs
  
 --> 
 
-Total memory usage is 281460 kilobytes
+Total memory usage is 294132 kilobytes
 
-Number of errors   :    1 (   0 filtered)
-Number of warnings :    6 (   0 filtered)
-Number of infos    :    0 (   0 filtered)
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   14 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
 

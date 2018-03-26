@@ -22,33 +22,32 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 -- Uncomment the following library declaration if instantiating
 -- any Xilinx primitives in this code.
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity VALIDATE is
+entity validate is
     Port ( reset : in  STD_LOGIC;
 			  refreshLife: in std_logic;
-           outlifewire : in  STD_LOGIC;
-           drawenabled : in  STD_LOGIC;
-			  posX : in std_logic;
-			  posy : in std_logic;
-			  launchlife : in STD_LOGIC;
+           life : in  STD_LOGIC;
+           drawEnable : in  STD_LOGIC;
+			  posX : in  STD_LOGIC_VECTOR (9 downto 0);
+           posY : in  STD_LOGIC_VECTOR (9 downto 0);
+			  X : in  STD_LOGIC_VECTOR (9 downto 0);
+			  Y : in  STD_LOGIC_VECTOR (9 downto 0);
+			  lunchLife : in STD_LOGIC;
            result : out  STD_LOGIC);
-end VALIDATE;
+end validate;
 
-architecture Behavioral of VALIDATE is
+architecture Behavioral of validate is
 
 begin
-
-result <= '0' when reset='1' else 
---draw enables
-when drawenabled = '1' and posX = '1' and posY = '1' then '1' else
---gol
-outlifewire when rising_edge(refreshLife);
+result <= '0' when reset='1'
+			else '1' when (lunchLife='0' and drawEnable='1' and X(9 downto 6)=posX(9 downto 6) and Y(8 downto 6)=posY(8 downto 6) )
+			else life when rising_edge(refreshLife);
 
 end Behavioral;
 
