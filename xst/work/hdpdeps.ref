@@ -1,85 +1,93 @@
-V3 55
-FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/clkDiv.vhd 2018/02/17.18:05:51 P.20131013
-EN work/clkDiv 1521040683 FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/clkDiv.vhd \
+V3 59
+FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/CellCount.vhd 2018/03/26.10:24:27 P.20131013
+EN work/CellCount 1522052932 \
+      FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/CellCount.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/CellCount/Behavioral 1522052933 \
+      FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/CellCount.vhd \
+      EN work/CellCount 1522052932
+FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/clkDiv.vhd 2018/02/17.19:05:51 P.20131013
+EN work/clkDiv 1522052928 FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/clkDiv.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
-AR work/clkDiv/Behavioral 1521040684 \
-      FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/clkDiv.vhd EN work/clkDiv 1521040683
-FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/clkSub.vhd 2018/02/17.17:15:48 P.20131013
-EN work/clkSub 1521040673 FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/clkSub.vhd \
+AR work/clkDiv/Behavioral 1522052929 \
+      FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/clkDiv.vhd EN work/clkDiv 1522052928
+FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/clkSub.vhd 2018/02/17.18:15:48 P.20131013
+EN work/clkSub 1522052918 FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/clkSub.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
       PB ieee/NUMERIC_STD 1381692181
-AR work/clkSub/Behavioral 1521040674 \
-      FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/clkSub.vhd EN work/clkSub 1521040673
-FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/controlVGA.vhd 2018/01/27.13:28:46 P.20131013
-EN work/controlVGA 1521040697 \
+AR work/clkSub/Behavioral 1522052919 \
+      FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/clkSub.vhd EN work/clkSub 1522052918
+FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/controlVGA.vhd 2018/01/27.14:28:46 P.20131013
+EN work/controlVGA 1522052944 \
       FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/controlVGA.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
-AR work/controlVGA/rtl 1521040698 \
+AR work/controlVGA/rtl 1522052945 \
       FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/controlVGA.vhd \
-      EN work/controlVGA 1521040697
-FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/digit.vhd 2018/01/31.22:17:06 P.20131013
-EN work/digit 1521040679 FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/digit.vhd \
+      EN work/controlVGA 1522052944
+FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/digit.vhd 2018/01/31.23:17:06 P.20131013
+EN work/digit 1522052924 FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/digit.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
-AR work/digit/Behavioral 1521040680 \
-      FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/digit.vhd EN work/digit 1521040679
-FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/grid.vhd 2018/03/14.16:17:39 P.20131013
-EN work/grid 1521040687 FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/grid.vhd \
+AR work/digit/Behavioral 1522052925 \
+      FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/digit.vhd EN work/digit 1522052924
+FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/grid.vhd 2018/03/26.10:28:35 P.20131013
+EN work/grid 1522052934 FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/grid.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
-AR work/grid/Behavioral 1521040688 \
-      FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/grid.vhd EN work/grid 1521040687
-FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/Hex32.vhd 2018/02/02.10:09:52 P.20131013
-EN work/Hex32 1521040695 FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/Hex32.vhd \
+AR work/grid/Behavioral 1522052935 \
+      FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/grid.vhd EN work/grid 1522052934 \
+      CP CellCount
+FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/Hex32.vhd 2018/02/02.11:09:52 P.20131013
+EN work/Hex32 1522052942 FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/Hex32.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
-AR work/Hex32/Behavioral 1521040696 \
-      FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/Hex32.vhd EN work/Hex32 1521040695 \
+AR work/Hex32/Behavioral 1522052943 \
+      FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/Hex32.vhd EN work/Hex32 1522052942 \
       CP valsplit CP posXadd CP digit
-FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/move.vhd 2018/02/18.17:56:18 P.20131013
-EN work/move 1521040691 FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/move.vhd \
+FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/move.vhd 2018/02/18.18:56:18 P.20131013
+EN work/move 1522052938 FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/move.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
-AR work/move/Behavioral 1521040692 \
-      FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/move.vhd EN work/move 1521040691 \
+AR work/move/Behavioral 1522052939 \
+      FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/move.vhd EN work/move 1522052938 \
       CP mover
-FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/mover.vhd 2018/02/17.12:41:11 P.20131013
-EN work/mover 1521040681 FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/mover.vhd \
+FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/mover.vhd 2018/02/17.13:41:11 P.20131013
+EN work/mover 1522052926 FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/mover.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
       PB ieee/NUMERIC_STD 1381692181
-AR work/mover/Behavioral 1521040682 \
-      FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/mover.vhd EN work/mover 1521040681 \
+AR work/mover/Behavioral 1522052927 \
+      FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/mover.vhd EN work/mover 1522052926 \
       CP clkSub
-FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/posXadd.vhd 2018/01/29.20:25:18 P.20131013
-EN work/posXadd 1521040677 \
+FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/posXadd.vhd 2018/01/29.21:25:18 P.20131013
+EN work/posXadd 1522052922 \
       FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/posXadd.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/posXadd/Behavioral 1521040678 \
-      FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/posXadd.vhd EN work/posXadd 1521040677
-FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/rectangle.vhd 2018/02/17.16:52:03 P.20131013
-EN work/rectangle 1521040685 \
+AR work/posXadd/Behavioral 1522052923 \
+      FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/posXadd.vhd EN work/posXadd 1522052922
+FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/rectangle.vhd 2018/02/17.17:52:03 P.20131013
+EN work/rectangle 1522052930 \
       FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/rectangle.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
-AR work/rectangle/Behavioral 1521040686 \
+AR work/rectangle/Behavioral 1522052931 \
       FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/rectangle.vhd \
-      EN work/rectangle 1521040685
-FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/shapes.vhd 2018/02/18.03:50:28 P.20131013
-EN work/shapes 1521040689 FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/shapes.vhd \
+      EN work/rectangle 1522052930
+FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/shapes.vhd 2018/02/18.04:50:28 P.20131013
+EN work/shapes 1522052936 FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/shapes.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
-AR work/shapes/Behavioral 1521040690 \
-      FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/shapes.vhd EN work/shapes 1521040689 \
+AR work/shapes/Behavioral 1522052937 \
+      FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/shapes.vhd EN work/shapes 1522052936 \
       CP clkDiv CP rectangle
-FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/TOP.vhd 2018/03/14.15:25:27 P.20131013
-EN work/TOP 1521040699 FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/TOP.vhd \
+FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/TOP.vhd 2018/03/14.16:25:27 P.20131013
+EN work/TOP 1522052946 FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/TOP.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
-AR work/TOP/Behavioral 1521040700 \
-      FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/TOP.vhd EN work/TOP 1521040699 \
+AR work/TOP/Behavioral 1522052947 \
+      FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/TOP.vhd EN work/TOP 1522052946 \
       CP grid CP shapes CP move CP valInc CP Hex32 CP controlVGA
-FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/valInc.vhd 2018/02/16.22:42:10 P.20131013
-EN work/valInc 1521040693 FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/valInc.vhd \
+FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/valInc.vhd 2018/02/16.23:42:10 P.20131013
+EN work/valInc 1522052940 FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/valInc.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
       PB ieee/NUMERIC_STD 1381692181
-AR work/valInc/Behavioral 1521040694 \
-      FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/valInc.vhd EN work/valInc 1521040693
-FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/valsplit.vhd 2018/01/29.20:00:40 P.20131013
-EN work/valsplit 1521040675 \
+AR work/valInc/Behavioral 1522052941 \
+      FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/valInc.vhd EN work/valInc 1522052940
+FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/valsplit.vhd 2018/01/29.21:00:40 P.20131013
+EN work/valsplit 1522052920 \
       FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/valsplit.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
-AR work/valsplit/Behavioral 1521040676 \
-      FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/valsplit.vhd EN work/valsplit 1521040675
+AR work/valsplit/Behavioral 1522052921 \
+      FL C:/Users/FONTEILLE/Desktop/ISE/Project1.2/valsplit.vhd EN work/valsplit 1522052920
